@@ -1,115 +1,145 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cihat Hyundai - Hyundai çıkma ve sıfır yedek parçalar. Motor, kaporta, tampon, far, stop, aksesuar ve mekanik parçalar. Türkiye genelinde hızlı kargo ve uygun fiyat garantisi.">
-<title>Cihat Hyundai | Hyundai Yedek Parça</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background:#f5f5f5;color:#333;}
-header{background:#003366;color:#fff;padding:20px;text-align:center;}
-header h1{font-size:2em;}
-nav{margin-top:10px;}
-nav a{color:#fff;margin:0 15px;font-weight:bold;text-decoration:none;transition:0.3s;}
-nav a:hover{color:#ffd700;}
-.hero{background:url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Hyundai_i20_1.2_Classic_T-GDI_2018_01.jpg') center/cover no-repeat;height:300px;display:flex;justify-content:center;align-items:center;color:#fff;text-shadow:2px 2px 6px rgba(0,0,0,0.7);}
-.hero h2{background:rgba(0,0,0,0.4);padding:15px;border-radius:10px;}
-section{padding:40px 20px;max-width:1200px;margin:0 auto;}
-h2{color:#003366;text-align:center;margin-bottom:30px;font-size:1.8em;}
-.product-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.product{background:#fff;padding:15px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);text-align:center;transition:0.3s;cursor:pointer;}
-.product img{width:100%;height:180px;object-fit:cover;border-radius:5px;}
-.product h3{color:#003366;margin:10px 0;font-size:1.2em;}
-.product p{font-size:0.95em;margin-bottom:10px;}
-.product:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.2);}
-.contact{text-align:center;margin-top:50px;}
-.contact a{display:inline-block;margin:10px 10px;padding:12px 20px;border-radius:8px;color:#fff;font-weight:bold;transition:0.3s;}
-.btn-call{background:#1e90ff;}
-.btn-whatsapp{background:#25D366;}
-.contact a:hover{opacity:0.85;}
-footer{background:#003366;color:#fff;text-align:center;padding:20px;margin-top:40px;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cihat Hyundai | Yedek Parça</title>
+  <meta name="description" content="Cihat Hyundai olarak Hyundai ve Kia araçlar için Accent, Era, Getz, i20, i30, Tucson, Sportage, Cerato, Rio, Ceed, Accent Blue yedek parçaları sunuyoruz. Kapı, çamurluk, tampon, bagaj kapağı, silindir kapağı, motor, şanzıman, far, sis lambası, stop, koltuk ve daha fazlası Türkiye geneli kargo ile." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a3d62;
+      color: #fff;
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: #0a3d62;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    nav {
+      background: #062f4f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    footer {
+      background: #062f4f;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>CİHAT HYUNDAİ OTO YEDEK PARÇALARI</h1>
-<nav>
-<a href="#products">Ürünler</a>
-<a href="#contact">İletişim</a>
-</nav>
-</header>
-<div class="hero">
-<h2>Hyundai Araçlar İçin Çıkma ve Sıfır Yedek Parçalar</h2>
-</div>
-<section id="products">
-<h2>Hyundai Modellerine Ait SEO Odaklı Ürünler (~5000 Kelime)</h2>
-<div class="product-list" id="product-list"></div>
-</section>
-<section id="contact">
-<h2>İletişim</h2>
-<div class="contact">
-<p>Adres: Serhat Mah. 1126. Cad. No: 14, Yenimahalle / ANKARA</p>
-<p>Telefon: 0553 738 38 06 – 0534 844 18 61</p>
-<a href="tel:+905537383806" class="btn-call">Hemen Ara</a>
-<a href="https://wa.me/905537383806" target="_blank" class="btn-whatsapp">WhatsApp'tan Yaz</a>
-</div>
-</section>
-<footer>
-&copy; 2026 CİHAT HYUNDAİ OTO YEDEK PARÇALARI
-</footer>
-<script>
-// Tamamlanmış Hyundai ürün kataloğu, tüm modeller ve parçalar
-const products=[
-  // Accent Serisi
-  {title:'Hyundai Accent Era Ön Tampon',desc:'Hyundai Accent Era ön tampon, çıkma ve sıfır seçenekleri ile Cihat Hyundai’de. Accent Era araçlarınız için uyumlu ve garantili. Türkiye genelinde hızlı kargo ve uygun fiyat garantisi.',img:'images/accent_era_on_tampon.jpg'},
-  {title:'Hyundai Accent Era Kaput',desc:'Accent Era kaput, sıfır ve garantili. Accent Era kaput ihtiyaçlarınız için güvenilir ve kaliteli seçenekler.',img:'images/accent_era_kaput.jpg'},
-  {title:'Hyundai Accent Yumurta Kasa Ön Tampon',desc:'Hyundai Accent Yumurta Kasa ön tampon, çıkma ve sıfır seçenekleri. Tüm Yumurta Kasa parçaları garantili ve hızlı kargo ile teslim edilir.',img:'images/accent_yumurta_on_tampon.jpg'},
-  {title:'Hyundai Accent Yumurta Kasa Kaput',desc:'Yumurta Kasa kaput, çıkma ve garantili seçenekleri ile Cihat Hyundai’de. Yumurta Kasa kaput ihtiyacınız için güvenilir ürünler.',img:'images/accent_yumurta_kaput.jpg'},
-  {title:'Hyundai Accent Admire Ön Tampon',desc:'Hyundai Accent Admire ön tampon, sıfır ve garantili. Admire modelleri için tüm kaporta parçaları uygun fiyat ve hızlı kargo ile sunulmaktadır.',img:'images/accent_admire_on_tampon.jpg'},
-  {title:'Hyundai Accent Milenyum Kaput',desc:'Accent Milenyum kaput, sıfır ve garantili. Cihat Hyundai tüm Milenyum parçalarını hızlı kargo ile sunuyor.',img:'images/accent_milenyum_kaput.jpg'},
-  // i10 Serisi
-  {title:'Hyundai i10 Ön Tampon',desc:'Hyundai i10 ön tampon, çıkma ve sıfır seçenekleri ile Cihat Hyundai’de. Tüm i10 modellerine uyumlu parçalar hızlı kargo ile teslim edilir.',img:'images/i10_on_tampon.jpg'},
-  {title:'Hyundai i10 Kaput',desc:'Hyundai i10 kaput, sıfır ve garantili. i10 kaput ihtiyacınız için güvenilir ve hızlı kargo.',img:'images/i10_kaput.jpg'},
-  {title:'Hyundai i10 Sol Ön Far',desc:'Hyundai i10 sol ön far, çıkma ve sıfır seçenekleri ile Cihat Hyundai’de. Garantili ve uyumlu far parçaları.',img:'images/i10_sol_on_far.jpg'},
-  // i20 Serisi
-  {title:'Hyundai i20 Sol Ön Kapı',desc:'Hyundai i20 sol ön kapı, çıkma ve garantili seçeneklerle Cihat Hyundai’de. i20 parçaları hızlı kargo ve uygun fiyat ile sunulmaktadır.',img:'images/i20_sol_on_kapi.jpg'},
-  {title:'Hyundai i20 Sağ Arka Stop',desc:'Hyundai i20 sağ arka stop, sıfır ve garantili. Tüm i20 stop parçaları hızlı kargo ile sunulmaktadır.',img:'images/i20_sag_arka_stop.jpg'},
-  {title:'Hyundai i20 Kaput',desc:'Hyundai i20 kaput, çıkma ve garantili. Cihat Hyundai tüm i20 kaput parçalarını güvenilir ve uygun fiyat ile sunuyor.',img:'images/i20_kaput.jpg'},
-  // Getz Serisi
-  {title:'Hyundai Getz Ön Kaput',desc:'Hyundai Getz ön kaput, çıkma ve garantili seçenekleri ile Cihat Hyundai’de. Getz araçlar için uyumlu parçalar sunuyoruz.',img:'images/getz_on_kaput.jpg'},
-  {title:'Hyundai Getz Sağ Ön Far',desc:'Getz sağ ön far, sıfır ve garantili. Getz araç parçaları hızlı kargo ve uygun fiyat ile sunulmaktadır.',img:'images/getz_sag_on_far.jpg'},
-  {title:'Hyundai Getz Sol Arka Stop',desc:'Getz sol arka stop, çıkma ve garantili seçenekleri ile Cihat Hyundai’de. Getz stop parçaları güvenilir ve hızlı kargo ile.',img:'images/getz_sol_arka_stop.jpg'},
-  // Tucson Serisi
-  {title:'Hyundai Tucson Sağ Arka Stop',desc:'Hyundai Tucson sağ arka stop, sıfır ve garantili. Tüm Tucson parçaları uygun fiyat ve hızlı kargo ile sunulmaktadır.',img:'images/tucson_sag_arka_stop.jpg'},
-  {title:'Hyundai Tucson Kaput',desc:'Tucson kaput, çıkma ve garantili. Cihat Hyundai tüm Tucson kaput parçalarını hızlı kargo ile sunuyor.',img:'images/tucson_kaput.jpg'},
-  {title:'Hyundai Tucson Ön Tampon',desc:'Tucson ön tampon, sıfır ve garantili. Tüm Tucson tampon parçaları uygun fiyat ile Cihat Hyundai’de.',img:'images/tucson_on_tampon.jpg'},
-  // Santa Fe Serisi
-  {title:'Hyundai Santa Fe Kaput',desc:'Hyundai Santa Fe kaput, sıfır ve garantili. Santa Fe parçaları hızlı kargo ve uygun fiyat ile Cihat Hyundai’de.',img:'images/santafe_kaput.jpg'},
-  {title:'Hyundai Santa Fe Ön Tampon',desc:'Santa Fe ön tampon, çıkma ve sıfır seçenekleri ile Cihat Hyundai’de. Garantili parçalar hızlı kargo ile.',img:'images/santafe_on_tampon.jpg'},
-  {title:'Hyundai Santa Fe Sağ Ön Far',desc:'Santa Fe sağ ön far, sıfır ve garantili. Santa Fe far parçaları güvenilir ve hızlı kargo ile sunulmaktadır.',img:'images/santafe_sag_on_far.jpg'},
-  // Kona Serisi
-  {title:'Hyundai Kona Sağ Ön Far',desc:'Hyundai Kona sağ ön far, sıfır ve garantili. Kona far ihtiyaçlarınız için güvenilir ve uygun fiyatlı çözümler.',img:'images/kona_sag_on_far.jpg'},
-  {title:'Hyundai Kona Kaput',desc:'Kona kaput, çıkma ve garantili seçenekleri ile Cihat Hyundai’de. Kona kaput parçaları hızlı kargo ve uygun fiyat ile sunulur.',img:'images/kona_kaput.jpg'},
-  {title:'Hyundai Kona Ön Tampon',desc:'Kona ön tampon, sıfır ve garantili. Tüm Kona tampon parçaları uygun fiyat ve hızlı kargo ile sunulmaktadır.',img:'images/kona_on_tampon.jpg'},
-  // Elantra Serisi
-  {title:'Hyundai Elantra Arka Stop',desc:'Hyundai Elantra arka stop, sıfır ve garantili olarak Cihat Hyundai’de mevcuttur. Elantra araçlarınız için çıkma veya sıfır seçenekleri.',img:'images/elantra_arka_stop.jpg'},
-  {title:'Hyundai Elantra Ön Tampon',desc:'Elantra ön tampon, çıkma ve sıfır seçenekleri ile Cihat Hyundai’de. Garantili ve uyumlu Elantra parçaları hızlı kargo ile sunulmaktadır.',img:'images/elantra_on_tampon.jpg'},
-  {title:'Hyundai Elantra Kaput',desc:'Elantra kaput, sıfır ve garantili. Cihat Hyundai tüm Elantra kaput parçalarını güvenilir ve uygun fiyat ile sunuyor.',img:'images/elantra_kaput.jpg'},
-  // i30 Serisi
-  {title:'Hyundai i30 Sol Ön Kapı',desc:'Hyundai i30 sol ön kapı, çıkma ve garantili seçenekleri ile hızlı kargo. i30 parçaları uygun fiyat ve güvenle sunulmaktadır.',img:'images/i30_sol_on_kapi.jpg'},
-  {title:'Hyundai i30 Sağ Arka Stop',desc:'i30 sağ arka stop, sıfır ve garantili. Tüm i30 stop parçaları hızlı kargo ile sunulmaktadır.',img:'images/i30_sag_arka_stop.jpg'},
-  {title:'Hyundai i30 Kaput',desc:'i30 kaput, çıkma ve garantili. i30 kaput parçaları güvenilir ve hızlı kargo ile sunulmaktadır.',img:'images/i30_kaput.jpg'}
-  // Daha fazla ürün eklenerek tam 5000 kelimeye tamamlanabilir
-];
-const productList=document.getElementById('product-list');
-products.forEach(p=>{
-  const div=document.createElement('div');
-  div.className='product';
-  div.innerHTML=`<img src='${p.img}' alt='${p.title}'><h3>${p.title}</h3><p>${p.desc}</p>`;
-  productList.appendChild(div);
-});
-</script>
+
+  <header>
+    <h1>CİHAT HYUNDAİ</h1>
+    <p>📞 Telefon: 05xx xxx xx xx | WhatsApp: 05xx xxx xx xx</p>
+  </header>
+
+  <nav>
+    <a href="#urunler">Parçalar</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+
+  <section id="urunler">
+    <h2>Parçalar</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Hyundai Accent & Era</h3>
+        <ul>
+          <li>Dizel motor</li>
+          <li>Akü, bagaj kapağı, kaput</li>
+          <li>Kapı, çamurluk, ön/arka tampon</li>
+          <li>Far, sis lambası, stop</li>
+          <li>Koltuk, direksiyon, şanzıman</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Accent Yumurta Kasa</h3>
+        <ul>
+          <li>Kapı, çamurluk, ön/arka tampon, bagaj kapağı</li>
+          <li>Far, sis lambası, stop</li>
+          <li>Koltuk, direksiyon, motor, şanzıman</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Hyundai Getz</h3>
+        <ul>
+          <li>Kapı, çamurluk, tamponlar, bagaj kapağı</li>
+          <li>Far, sis lambası, stop</li>
+          <li>Koltuk, direksiyon, motor, şanzıman</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Hyundai i20 / i30 / Tucson</h3>
+        <ul>
+          <li>Kapı, çamurluk, tampon, bagaj kapağı</li>
+          <li>Far, sis lambası, stop</li>
+          <li>Koltuk, direksiyon, motor, şanzıman</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Kia Sportage / Cerato / Rio / Ceed / Accent Blue</h3>
+        <ul>
+          <li>Kapı, çamurluk, tampon, bagaj kapağı</li>
+          <li>Far, sis lambası, stop</li>
+          <li>Koltuk, direksiyon, motor, şanzıman</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <p>📞 Telefon / WhatsApp: 05xx xxx xx xx</p>
+    <p>📍 Türkiye Geneli Kargo</p>
+    <p>📸 Instagram: @cihathyundai</p>
+  </section>
+
+  <footer>
+    © 2026 Cihat Hyundai – Tüm Hakları Saklıdır
+  </footer>
+
 </body>
 </html>
