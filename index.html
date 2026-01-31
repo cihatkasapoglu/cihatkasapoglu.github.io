@@ -7,59 +7,57 @@
 <title>Cihat Hyundai | Hyundai Yedek Parça Demo</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
-body { background:#f5f5f5; color:#333; }
-a { text-decoration:none; color:inherit; }
-header { background:#003366; color:#fff; padding:20px 0; text-align:center; }
-header h1 { font-size:2.5em; }
-nav a { margin:0 15px; color:#fff; font-weight:bold; }
-nav a:hover { color:#ffd700; }
-.hero { position:relative; width:100%; height:450px; background:url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Hyundai_i20_1.2_Classic_T-GDI_2018_01.jpg') center/cover no-repeat; display:flex; justify-content:center; align-items:center; color:#fff; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
-.hero h2 { font-size:2em; background:rgba(0,0,0,0.4); padding:15px; border-radius:10px; text-align:center; }
-section { padding:60px 20px; max-width:1200px; margin:0 auto; }
-h2 { color:#003366; text-align:center; margin-bottom:40px; font-size:2em; }
-.filter-btns { text-align:center; margin-bottom:40px; }
-.filter-btns button { background:#003366; color:#fff; border:none; padding:10px 20px; margin:5px; border-radius:5px; cursor:pointer; font-weight:bold; transition:0.3s; }
-.filter-btns button:hover, .filter-btns button.active { background:#ffd700; color:#003366; }
-.parca-list { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-.parca { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.3s; text-align:center; cursor:pointer; display:block; }
-.parca img { width:100%; height:200px; object-fit:cover; }
-.parca h3 { padding:15px; font-size:1.2em; color:#003366; }
-.parca:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000; }
-.modal-content { background:#fff; padding:30px; border-radius:10px; max-width:700px; width:90%; position:relative; text-align:center; }
-.modal-content img { width:100%; height:auto; border-radius:5px; margin-bottom:15px; }
-.modal-content h3 { color:#003366; margin-bottom:15px; }
-.modal-content p { font-size:1em; margin-bottom:15px; }
-.close-btn { position:absolute; top:15px; right:15px; font-size:1.5em; font-weight:bold; cursor:pointer; }
-.hizmetler ul { list-style:none; max-width:800px; margin:0 auto; }
-.hizmetler li { background:#003366; color:#fff; margin:10px 0; padding:15px; border-radius:8px; text-align:center; font-weight:bold; }
-.contact { text-align:center; }
-.contact p { margin-bottom:10px; font-weight:bold; }
-.contact a { display:inline-block; margin:10px 10px 0 10px; padding:12px 20px; border-radius:8px; color:#fff; font-weight:bold; transition:0.3s; }
-.btn-call { background:#1e90ff; }
-.btn-whatsapp { background:#25D366; }
-.contact a:hover { opacity:0.85; }
-footer { background:#003366; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+/* Temel stil */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{background:#f5f5f5;color:#333;}
+a{text-decoration:none;color:inherit;}
+header{background:#003366;color:#fff;padding:20px 0;text-align:center;}
+header h1{font-size:2.5em;}
+nav a{margin:0 15px;color:#fff;font-weight:bold;}
+nav a:hover{color:#ffd700;}
+.hero{position:relative;width:100%;height:450px;background:url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Hyundai_i20_1.2_Classic_T-GDI_2018_01.jpg') center/cover no-repeat;display:flex;justify-content:center;align-items:center;color:#fff;text-shadow:2px 2px 6px rgba(0,0,0,0.7);}
+.hero h2{font-size:2em;background:rgba(0,0,0,0.4);padding:15px;border-radius:10px;text-align:center;}
+section{padding:60px 20px;max-width:1200px;margin:0 auto;}
+h2{color:#003366;text-align:center;margin-bottom:40px;font-size:2em;}
+.filter-btns{text-align:center;margin-bottom:40px;}
+.filter-btns button{background:#003366;color:#fff;border:none;padding:10px 20px;margin:5px;border-radius:5px;cursor:pointer;font-weight:bold;transition:0.3s;}
+.filter-btns button:hover,.filter-btns button.active{background:#ffd700;color:#003366;}
+.product-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.product{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);transition:0.3s;text-align:center;cursor:pointer;display:block;}
+.product img{width:100%;height:200px;object-fit:cover;}
+.product h3{padding:15px;font-size:1.2em;color:#003366;}
+.product:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:1000;}
+.modal-content{background:#fff;padding:30px;border-radius:10px;max-width:700px;width:90%;position:relative;text-align:center;}
+.modal-content img{width:100%;height:auto;border-radius:5px;margin-bottom:15px;}
+.modal-content h3{color:#003366;margin-bottom:15px;}
+.modal-content p{font-size:1em;margin-bottom:15px;}
+.close-btn{position:absolute;top:15px;right:15px;font-size:1.5em;font-weight:bold;cursor:pointer;}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);font-size:2em;font-weight:bold;color:#003366;background:rgba(255,255,255,0.7);padding:5px 10px;border-radius:5px;cursor:pointer;}
+#prev{left:10px;}
+#next{right:10px;}
+.contact{text-align:center;}
+.contact p{margin-bottom:10px;font-weight:bold;}
+.contact a{display:inline-block;margin:10px 10px 0 10px;padding:12px 20px;border-radius:8px;color:#fff;font-weight:bold;transition:0.3s;}
+.btn-call{background:#1e90ff;}
+.btn-whatsapp{background:#25D366;}
+.contact a:hover{opacity:0.85;}
+footer{background:#003366;color:#fff;text-align:center;padding:20px;margin-top:40px;}
 </style>
 </head>
 <body>
-
 <header>
 <h1>CİHAT HYUNDAİ OTO YEDEK PARÇALARI</h1>
 <nav>
-<a href="#parcalar">Parçalar</a>
-<a href="#hizmetler">Hizmetler</a>
-<a href="#iletisim">İletişim</a>
+<a href="#products">Ürünler</a>
+<a href="#contact">İletişim</a>
 </nav>
 </header>
-
 <div class="hero">
 <h2>Hyundai Araçlar İçin Çıkma ve Sıfır Yedek Parçalar</h2>
 </div>
-
-<section id="parcalar">
-<h2>Parça Kategorileri</h2>
+<section id="products">
+<h2>Ürün Kategorileri</h2>
 <div class="filter-btns">
 <button class="filter-btn active" data-filter="all">Tümü</button>
 <button class="filter-btn" data-filter="motor">Motor</button>
@@ -67,20 +65,9 @@ footer { background:#003366; color:#fff; text-align:center; padding:20px; margin
 <button class="filter-btn" data-filter="kaporta">Kaporta</button>
 <button class="filter-btn" data-filter="mekanik">Mekanik</button>
 </div>
-<div class="parca-list" id="parca-list"></div>
+<div class="product-list" id="product-list"></div>
 </section>
-
-<section id="hizmetler" class="hizmetler">
-<h2>Hizmetlerimiz</h2>
-<ul>
-<li>Hyundai çıkma ve sıfır yedek parça satışı</li>
-<li>Motor tipleri: Anahtar Teslim, Çıkma, Rektefiyeli, Sandık, Sıfır</li>
-<li>Kaporta, mekanik ve aksesuar parçaları</li>
-<li>Aynı gün kargo – Türkiye geneli teslimat</li>
-</ul>
-</section>
-
-<section id="iletisim">
+<section id="contact">
 <h2>İletişim</h2>
 <div class="contact">
 <p>Adres: Serhat Mah. 1126. Cad. No: 14, Yenimahalle / ANKARA</p>
@@ -89,81 +76,71 @@ footer { background:#003366; color:#fff; text-align:center; padding:20px; margin
 <a href="https://wa.me/905537383806" target="_blank" class="btn-whatsapp">WhatsApp'tan Yaz</a>
 </div>
 </section>
-
 <footer>
 &copy; 2026 CİHAT HYUNDAİ OTO YEDEK PARÇALARI
 </footer>
-
 <div class="modal" id="modal">
 <div class="modal-content">
 <span class="close-btn" id="closeModal">&times;</span>
 <img id="modal-img" src="" alt="">
 <h3 id="modal-title"></h3>
 <p id="modal-desc"></p>
+<span id="prev" class="slider-btn">&#10094;</span>
+<span id="next" class="slider-btn">&#10095;</span>
 </div>
 </div>
-
 <script>
-const categories=['motor','sanziman','kaporta','mekanik'];
-const models=['Accent','i10','i20','Getz','Tucson','Elantra','Kona'];
-const motorTypes=['Anahtar Teslim','Çıkma','Rektefiyeli','Sandık','Sıfır'];
-const parts=[];
-
-// 200 ürün üret
-for(let i=1;i<=200;i++){
-  const category=categories[Math.floor(Math.random()*categories.length)];
-  const model=models[Math.floor(Math.random()*models.length)];
-  const motorType=motorTypes[Math.floor(Math.random()*motorTypes.length)];
-  const imgUrl=`https://source.unsplash.com/400x300/?car,${category}`;
-  const title=`${motorType} ${model} ${category.charAt(0).toUpperCase()+category.slice(1)}`;
-  const desc=`Hyundai ${model} ${category} parçası, tip: ${motorType}`;
-  parts.push({category,imgUrl,title,desc});
-}
-
-const parcaList=document.getElementById('parca-list');
-parts.forEach(p=>{
+const products=[
+  {category:'motor',model:'Accent',type:'Anahtar Teslim',images:['images/motor1.jpg','images/motor2.jpg'],desc:'Hyundai Accent Anahtar Teslim Motor, sıfır ve garantili.'},
+  {category:'kaporta',model:'i20',type:'Tampon',images:['images/tampon1.jpg'],desc:'Hyundai i20 Ön Tampon, çıkma ve garantili.'},
+  {category:'mekanik',model:'Getz',type:'Debriyaj',images:['images/debriyaj1.jpg'],desc:'Hyundai Getz Debriyaj Seti, çıkma.'},
+  {category:'sanziman',model:'Tucson',type:'Şanzıman',images:['images/sanziman1.jpg'],desc:'Hyundai Tucson Şanzıman, sıfır.'}
+];
+const productList=document.getElementById('product-list');
+products.forEach((p,i)=>{
   const div=document.createElement('div');
-  div.className='parca';
+  div.className='product';
   div.setAttribute('data-category',p.category);
-  div.setAttribute('data-title',p.title);
-  div.setAttribute('data-desc',p.desc);
-  div.innerHTML=`<img src='${p.imgUrl}' alt='${p.title}'><h3>${p.title}</h3>`;
-  parcaList.appendChild(div);
+  div.setAttribute('data-index',i);
+  div.innerHTML=`<img src='${p.images[0]}' alt='${p.type}'><h3>${p.type} ${p.model}</h3>`;
+  productList.appendChild(div);
 });
-
-// Filtreleme
 const filterBtns=document.querySelectorAll('.filter-btn');
-const parcalar=document.querySelectorAll('.parca');
-filterBtns.forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    filterBtns.forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter=btn.getAttribute('data-filter');
-    document.querySelectorAll('.parca').forEach(p=>{
-      if(filter==='all'||p.getAttribute('data-category')===filter)p.style.display='block';
-      else p.style.display='none';
-    });
+filterBtns.forEach(btn=>{btn.addEventListener('click',()=>{
+  filterBtns.forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter=btn.getAttribute('data-filter');
+  document.querySelectorAll('.product').forEach(p=>{
+    if(filter==='all'||p.getAttribute('data-category')===filter)p.style.display='block';
+    else p.style.display='none';
   });
-});
-
-// Modal
+});});
 const modal=document.getElementById('modal');
 const modalImg=document.getElementById('modal-img');
 const modalTitle=document.getElementById('modal-title');
 const modalDesc=document.getElementById('modal-desc');
-const closeModal=document.getElementById('closeModal');
-parcaList.addEventListener('click',e=>{
-  const parca=e.target.closest('.parca');
-  if(parca){
+let currentImages=[];
+let currentIndex=0;
+document.getElementById('product-list').addEventListener('click',e=>{
+  const product=e.target.closest('.product');
+  if(product){
+    const index=product.getAttribute('data-index');
+    currentImages=products[index].images;
+    currentIndex=0;
     modal.style.display='flex';
-    modalImg.src=parca.querySelector('img').src;
-    modalTitle.textContent=parca.getAttribute('data-title');
-    modalDesc.textContent=parca.getAttribute('data-desc');
+    modalImg.src=currentImages[currentIndex];
+    modalTitle.textContent=products[index].type+' '+products[index].model;
+    modalDesc.textContent=products[index].desc;
   }
 });
-closeModal.addEventListener('click',()=>modal.style.display='none');
+document.getElementById('closeModal').addEventListener('click',()=>modal.style.display='none');
 window.addEventListener('click',e=>{if(e.target==modal) modal.style.display='none';});
+document.getElementById('prev').addEventListener('click',()=>{
+  if(currentImages.length>1){currentIndex=(currentIndex-1+currentImages.length)%currentImages.length; modalImg.src=currentImages[currentIndex];}
+});
+document.getElementById('next').addEventListener('click',()=>{
+  if(currentImages.length>1){currentIndex=(currentIndex+1)%currentImages.length; modalImg.src=currentImages[currentIndex];}
+});
 </script>
-
 </body>
 </html>
