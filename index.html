@@ -3,48 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cihat Hyundai oto yedek parça Ankara. Hyundai motor, şanzıman, kaporta, mekanik parçalar. Türkiye geneli kargo.">
+<meta name="description" content="Cihat Hyundai - Hyundai çıkma ve sıfır yedek parçalar. Motor, kaporta, mekanik, aksesuarlar. Tüm modeller ve Türkiye geneli kargo.">
 <title>Cihat Hyundai | Hyundai Yedek Parça</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
-  body { background:#f5f5f5; color:#333; }
-  a { text-decoration:none; color:inherit; }
-  header { background:#003366; color:#fff; padding:20px 0; text-align:center; }
-  header h1 { font-size:2.5em; }
-  nav a { margin:0 15px; color:#fff; font-weight:bold; }
-  nav a:hover { color:#ffd700; }
-  .hero { position:relative; width:100%; height:400px; background:url('images/hyundai-hero.jpg') center/cover no-repeat; display:flex; justify-content:center; align-items:center; color:#fff; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
-  .hero h2 { font-size:2em; background:rgba(0,0,0,0.4); padding:15px; border-radius:10px; }
-  section { padding:60px 20px; max-width:1200px; margin:0 auto; }
-  h2 { color:#003366; text-align:center; margin-bottom:40px; font-size:2em; }
-  
-  /* Filtre butonları */
-  .filter-btns { text-align:center; margin-bottom:40px; }
-  .filter-btns button { background:#003366; color:#fff; border:none; padding:10px 20px; margin:5px; border-radius:5px; cursor:pointer; font-weight:bold; transition:0.3s; }
-  .filter-btns button:hover, .filter-btns button.active { background:#ffd700; color:#003366; }
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
+body { background:#f5f5f5; color:#333; }
+a { text-decoration:none; color:inherit; }
+header { background:#003366; color:#fff; padding:20px 0; text-align:center; }
+header h1 { font-size:2.5em; }
+nav a { margin:0 15px; color:#fff; font-weight:bold; }
+nav a:hover { color:#ffd700; }
 
-  /* Parça Grid */
-  .parca-list { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-  .parca { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.3s; text-align:center; display:block; }
-  .parca img { width:100%; height:200px; object-fit:cover; }
-  .parca h3 { padding:15px; font-size:1.2em; color:#003366; }
-  .parca:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+.hero { position:relative; width:100%; height:450px; background:url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Hyundai_i20_1.2_Classic_T-GDI_2018_01.jpg') center/cover no-repeat; display:flex; justify-content:center; align-items:center; color:#fff; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
+.hero h2 { font-size:2em; background:rgba(0,0,0,0.4); padding:15px; border-radius:10px; }
 
-  /* Hizmetler */
-  .hizmetler ul { list-style:none; max-width:800px; margin:0 auto; }
-  .hizmetler li { background:#003366; color:#fff; margin:10px 0; padding:15px; border-radius:8px; text-align:center; font-weight:bold; }
+section { padding:60px 20px; max-width:1200px; margin:0 auto; }
+h2 { color:#003366; text-align:center; margin-bottom:40px; font-size:2em; }
 
-  /* İletişim */
-  .contact { text-align:center; }
-  .contact p { margin-bottom:10px; font-weight:bold; }
-  .contact a { display:inline-block; margin:10px 10px 0 10px; padding:12px 20px; border-radius:8px; color:#fff; font-weight:bold; transition:0.3s; }
-  .btn-call { background:#1e90ff; }
-  .btn-whatsapp { background:#25D366; }
-  .contact a:hover { opacity:0.85; }
+/* Filtreler */
+.filter-btns { text-align:center; margin-bottom:40px; }
+.filter-btns button { background:#003366; color:#fff; border:none; padding:10px 20px; margin:5px; border-radius:5px; cursor:pointer; font-weight:bold; transition:0.3s; }
+.filter-btns button:hover, .filter-btns button.active { background:#ffd700; color:#003366; }
 
-  /* Footer */
-  footer { background:#003366; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+/* Parça Grid */
+.parca-list { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+.parca { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.3s; text-align:center; display:block; cursor:pointer; }
+.parca img { width:100%; height:200px; object-fit:cover; }
+.parca h3 { padding:15px; font-size:1.2em; color:#003366; }
+.parca:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+/* Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000; }
+.modal-content { background:#fff; padding:30px; border-radius:10px; max-width:700px; width:90%; position:relative; text-align:center; }
+.modal-content img { width:100%; height:auto; border-radius:5px; margin-bottom:15px; }
+.modal-content h3 { color:#003366; margin-bottom:15px; }
+.modal-content p { font-size:1em; margin-bottom:15px; }
+.close-btn { position:absolute; top:15px; right:15px; font-size:1.5em; font-weight:bold; cursor:pointer; }
+
+/* Hizmetler */
+.hizmetler ul { list-style:none; max-width:800px; margin:0 auto; }
+.hizmetler li { background:#003366; color:#fff; margin:10px 0; padding:15px; border-radius:8px; text-align:center; font-weight:bold; }
+
+/* İletişim */
+.contact { text-align:center; }
+.contact p { margin-bottom:10px; font-weight:bold; }
+.contact a { display:inline-block; margin:10px 10px 0 10px; padding:12px 20px; border-radius:8px; color:#fff; font-weight:bold; transition:0.3s; }
+.btn-call { background:#1e90ff; }
+.btn-whatsapp { background:#25D366; }
+.contact a:hover { opacity:0.85; }
+
+/* Footer */
+footer { background:#003366; color:#fff; text-align:center; padding:20px; margin-top:40px; }
 </style>
 </head>
 <body>
@@ -59,11 +69,11 @@
 </header>
 
 <div class="hero">
-  <h2>Hyundai Araçlar İçin Tüm Yedek Parçalar</h2>
+  <h2>Hyundai Çıkma ve Sıfır Yedek Parçalar</h2>
 </div>
 
 <section id="parcalar">
-  <h2>Yedek Parçalarımız</h2>
+  <h2>Yedek Parça Kategorileri</h2>
 
   <div class="filter-btns">
     <button class="filter-btn active" data-filter="all">Tümü</button>
@@ -74,29 +84,36 @@
   </div>
 
   <div class="parca-list">
-    <div class="parca" data-category="motor">
-      <img src="images/motor.jpg" alt="Motor">
-      <h3>Motor</h3>
+    <!-- Motor -->
+    <div class="parca" data-category="motor" data-title="Anahtar Teslim Motor" data-desc="Hyundai anahtar teslim motor, sıfır ve garantili.">
+      <img src="https://cdn.pixabay.com/photo/2016/03/09/09/32/car-engine-1248493_1280.jpg" alt="Anahtar Teslim Motor">
+      <h3>Anahtar Teslim Motor</h3>
     </div>
-    <div class="parca" data-category="sanziman">
-      <img src="images/sanziman.jpg" alt="Şanzıman">
+    <div class="parca" data-category="motor" data-title="Çıkma Motor" data-desc="Hyundai çıkma motor, rektefiyeli ve test edilmiş.">
+      <img src="https://cdn.pixabay.com/photo/2017/03/01/18/48/engine-2105236_1280.jpg" alt="Çıkma Motor">
+      <h3>Çıkma Motor</h3>
+    </div>
+
+    <!-- Şanzıman -->
+    <div class="parca" data-category="sanziman" data-title="Şanzıman" data-desc="Hyundai çıkma ve sıfır şanzıman çeşitleri.">
+      <img src="https://cdn.pixabay.com/photo/2015/06/24/15/45/transmission-819019_1280.jpg" alt="Şanzıman">
       <h3>Şanzıman</h3>
     </div>
-    <div class="parca" data-category="kaporta">
-      <img src="images/kaporta.jpg" alt="Kaporta">
-      <h3>Kaporta</h3>
+
+    <!-- Kaporta -->
+    <div class="parca" data-category="kaporta" data-title="Tampon Seti" data-desc="Ön ve arka tampon setleri Hyundai modelleri için.">
+      <img src="https://cdn.pixabay.com/photo/2013/07/12/15/12/car-152020_1280.png" alt="Tampon">
+      <h3>Tampon</h3>
     </div>
-    <div class="parca" data-category="mekanik">
-      <img src="images/mekanik.jpg" alt="Mekanik">
-      <h3>Mekanik</h3>
+    <div class="parca" data-category="kaporta" data-title="Far & Stop" data-desc="Hyundai far ve stop grubu orijinal ve çıkma seçenekleri.">
+      <img src="https://cdn.pixabay.com/photo/2017/09/21/13/42/car-2779694_1280.jpg" alt="Far & Stop">
+      <h3>Far & Stop</h3>
     </div>
-    <div class="parca" data-category="motor">
-      <img src="images/motor2.jpg" alt="Motor">
-      <h3>Motor Parçası 2</h3>
-    </div>
-    <div class="parca" data-category="kaporta">
-      <img src="images/kaporta2.jpg" alt="Kaporta">
-      <h3>Kaporta Parçası 2</h3>
+
+    <!-- Mekanik -->
+    <div class="parca" data-category="mekanik" data-title="Fren Sistemi" data-desc="Hyundai fren balata, disk ve sistem parçaları.">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/05/09/brake-1868000_1280.jpg" alt="Fren Sistemi">
+      <h3>Fren Sistemi</h3>
     </div>
   </div>
 </section>
@@ -104,9 +121,9 @@
 <section id="hizmetler" class="hizmetler">
   <h2>Hizmetlerimiz</h2>
   <ul>
-    <li>Hyundai oto yedek parça satışı</li>
-    <li>Motor ve mekanik parçalar</li>
-    <li>Çıkma ve orijinal parçalar</li>
+    <li>Hyundai çıkma ve sıfır yedek parça satışı</li>
+    <li>Motor tipleri: Anahtar Teslim, Çıkma, Rektefiyeli, Sandık, Sıfır</li>
+    <li>Kaporta, mekanik ve aksesuar parçaları</li>
     <li>Aynı gün kargo – Türkiye geneli teslimat</li>
   </ul>
 </section>
@@ -125,8 +142,18 @@
   &copy; 2026 CİHAT HYUNDAİ OTO YEDEK PARÇALARI
 </footer>
 
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
 <script>
-  // Filtreleme JS
+  // Filtreleme
   const filterBtns = document.querySelectorAll('.filter-btn');
   const parcalar = document.querySelectorAll('.parca');
 
@@ -137,14 +164,30 @@
 
       const filter = btn.getAttribute('data-filter');
       parcalar.forEach(p => {
-        if (filter === 'all' || p.getAttribute('data-category') === filter) {
-          p.style.display = 'block';
-        } else {
-          p.style.display = 'none';
-        }
+        if(filter === 'all' || p.getAttribute('data-category') === filter) p.style.display = 'block';
+        else p.style.display = 'none';
       });
     });
   });
+
+  // Modal açma
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const closeModal = document.getElementById('closeModal');
+
+  parcalar.forEach(p => {
+    p.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = p.querySelector('img').src;
+      modalTitle.textContent = p.getAttribute('data-title');
+      modalDesc.textContent = p.getAttribute('data-desc');
+    });
+  });
+
+  closeModal.addEventListener('click', () => modal.style.display = 'none');
+  window.addEventListener('click', e => { if(e.target == modal) modal.style.display = 'none'; });
 </script>
 
 </body>
