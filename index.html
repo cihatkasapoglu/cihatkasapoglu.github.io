@@ -3,170 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CİHAT HYUNDAI | Orijinal Yedek Parça Dünyası</title>
+    <title>CİHAT HYUNDAI | Ankara Oto Yedek Parça - Orijinal & Çıkma</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700;800&display=swap');
         body { font-family: 'Exo 2', sans-serif; }
-        .gradient-blue { background: linear-gradient(135deg, #002c5f 0%, #005aab 100%); }
-        .part-card:hover img { transform: scale(1.05); }
+        .hyundai-blue { background-color: #002c5f; }
+        .hyundai-red { background-color: #e63946; } /* Logondaki kırmızıya yakın ton */
+        .text-hyundai-blue { color: #002c5f; }
+        .gradient-dark { background: linear-gradient(135deg, #001a38 0%, #002c5f 100%); }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-900">
 
-    <div class="bg-[#002c5f] text-white py-2 px-6 text-sm flex justify-between items-center border-b border-blue-800">
-        <div><i class="fas fa-check-circle text-green-400 mr-2"></i> %100 Orijinal Hyundai Yedek Parçaları</div>
-        <div class="hidden md:block italic">Şasi Numarası ile Kesin Uyumluluk Garantisi!</div>
+    <div class="bg-gray-100 py-2 border-b text-xs text-gray-600 px-6 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <i class="fas fa-map-marker-alt text-red-600 mr-1"></i> Ayyıldız Sanayi Sitesi No:14, Yenimahalle/Ankara
+            </div>
+            <div class="flex gap-6 italic font-bold">
+                <span><i class="fas fa-shipping-fast text-blue-600 mr-1"></i> Türkiye'nin Her Yerine Hızlı Kargo</span>
+                <span><i class="fas fa-check-double text-green-600 mr-1"></i> Şasi No ile %100 Uyum Garantisi</span>
+            </div>
+        </div>
     </div>
 
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex flex-wrap items-center justify-between gap-4">
-                <div class="text-3xl font-extrabold text-[#002c5f] tracking-tighter">
-                    CİHAT <span class="text-blue-600">HYUNDAI</span> 
-                    <div class="text-[10px] tracking-[4px] font-light text-gray-500 uppercase">Oto Yedek Parça</div>
-                </div>
+    <nav class="bg-white shadow-xl sticky top-0 z-50 py-3">
+        <div class="container mx-auto px-6 flex flex-wrap justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://i.imgur.com/f0m0K5R.png" alt="Cihat Hyundai Logo" class="h-16 md:h-20"> </a>
 
-                <div class="flex-1 max-w-2xl mx-4">
-                    <div class="relative">
-                        <input type="text" placeholder="Parça adı, OEM kodu veya Şasi no yazın..." class="w-full border-2 border-gray-200 rounded-lg py-3 px-11 focus:border-blue-600 outline-none transition-all">
-                        <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
-                        <button class="absolute right-2 top-2 bg-blue-600 text-white px-4 py-1.5 rounded-md hover:bg-blue-700">Bul</button>
-                    </div>
+            <div class="flex flex-col md:flex-row gap-4 items-center mt-4 md:mt-0">
+                <div class="flex gap-3">
+                    <a href="https://instagram.com/cihathyundai" target="_blank" class="text-pink-600 text-xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/cihathyundai" target="_blank" class="text-blue-700 text-xl hover:scale-110 transition"><i class="fab fa-facebook"></i></a>
                 </div>
-
-                <div class="flex items-center gap-6">
-                    <a href="tel:+905000000000" class="flex items-center gap-2 group">
-                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-500 transition">
-                            <i class="fas fa-phone text-green-600 group-hover:text-white"></i>
-                        </div>
-                        <div class="hidden lg:block text-sm">
-                            <p class="text-gray-500">Hızlı Destek</p>
-                            <p class="font-bold">05xx xxx xx xx</p>
-                        </div>
-                    </a>
+                <div class="h-8 w-[1px] bg-gray-300 hidden md:block mx-2"></div>
+                <div class="text-right leading-tight">
+                    <p class="text-[10px] text-gray-500 uppercase font-bold">Müşteri Destek Hattı</p>
+                    <a href="tel:+905537383806" class="text-lg font-extrabold text-hyundai-blue hover:text-blue-600">0553 738 38 06</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="gradient-blue py-16 text-white relative overflow-hidden">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
-            <div class="md:w-1/2 space-y-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Aradığınız Parça, <br>Cihat Güvencesiyle.</h1>
-                <p class="text-xl text-blue-100">Hyundai i10, i20, i30, Tucson ve Santa Fe modellerinin tüm orijinal ve yan sanayi yedek parçaları stoklarımızda.</p>
-                <div class="flex gap-4">
-                    <button class="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold flex items-center shadow-xl hover:bg-gray-100 transition">
-                        <i class="fas fa-th-large mr-2"></i> Kategoriler
-                    </button>
-                    <button class="bg-green-500 text-white px-8 py-4 rounded-xl font-bold flex items-center shadow-xl hover:bg-green-600 transition">
-                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Şasi ile Sorgula
-                    </button>
+    <section class="gradient-dark py-12 md:py-24 text-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 items-center">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-6xl font-black italic">HYUNDAI <br><span class="text-red-500">PARÇA</span> MERKEZİ</h1>
+                <p class="text-xl text-blue-100 max-w-lg">Cihat Hyundai güvencesiyle; tüm modellerin orijinal, yan sanayi ve çıkma yedek parçaları tek bir adreste. Ankara'dan tüm Türkiye'ye!</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/905537383806" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold flex items-center shadow-lg transition transform hover:-translate-y-1">
+                        <i class="fab fa-whatsapp mr-3 text-2xl"></i> WHATSAPP İLE FİYAT AL
+                    </a>
+                    <a href="tel:05348441861" class="bg-white text-hyundai-blue px-8 py-4 rounded-xl font-bold border-b-4 border-gray-300 active:border-0 transition">
+                        <i class="fas fa-phone-alt mr-2"></i> 0534 844 18 61
+                    </a>
                 </div>
             </div>
-            <div class="md:w-1/2 mt-12 md:mt-0">
-                <img src="https://www.pngmart.com/files/10/Car-Engine-Part-PNG-Clipart.png" alt="Hyundai Parça" class="w-full drop-shadow-2xl">
+            <div class="hidden md:block">
+                <img src="https://www.freeiconspng.com/uploads/engine-png-15.png" alt="Hyundai Motor Parçası" class="w-full drop-shadow-[0_35px_35px_rgba(255,255,255,0.2)]">
             </div>
         </div>
     </section>
 
-    <section class="container mx-auto -mt-10 px-6 relative z-20">
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
-            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition cursor-pointer group">
-                <i class="fas fa-oil-can text-3xl text-blue-600 mb-3 group-hover:scale-110 transition"></i>
-                <p class="font-bold text-sm">Periyodik Bakım</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition cursor-pointer group">
-                <i class="fas fa-bolt text-3xl text-blue-600 mb-3 group-hover:scale-110 transition"></i>
-                <p class="font-bold text-sm">Aydınlatma</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition cursor-pointer group">
-                <i class="fas fa-fan text-3xl text-blue-600 mb-3 group-hover:scale-110 transition"></i>
-                <p class="font-bold text-sm">Soğutma Sistemi</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition cursor-pointer group">
-                <i class="fas fa-gear text-3xl text-blue-600 mb-3 group-hover:scale-110 transition"></i>
-                <p class="font-bold text-sm">Şanzıman</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition cursor-pointer group">
-                <i class="fas fa-shield-alt text-3xl text-blue-600 mb-3 group-hover:scale-110 transition"></i>
-                <p class="font-bold text-sm">Kaporta / Karoser</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition cursor-pointer group">
-                <i class="fas fa-car-battery text-3xl text-blue-600 mb-3 group-hover:scale-110 transition"></i>
-                <p class="font-bold text-sm">Akü & Elektrik</p>
+    <div class="bg-white py-8 border-b">
+        <div class="container mx-auto px-6">
+            <p class="text-center font-bold text-gray-400 mb-6 uppercase tracking-widest text-sm">Resmi Satış Kanallarımız</p>
+            <div class="flex flex-wrap justify-center gap-8 opacity-70 hover:opacity-100 transition">
+                <a href="https://cihathyundai.sahibinden.com" target="_blank" class="flex items-center gap-2 grayscale hover:grayscale-0 transition">
+                   <span class="text-2xl font-black text-yellow-500 italic">sahibinden.com</span>
+                </a>
+                <a href="https://cihathyundai.otocikma.com" target="_blank" class="flex items-center gap-2 grayscale hover:grayscale-0 transition">
+                    <span class="text-2xl font-black text-red-600">otoçıkma.com</span>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="container mx-auto py-20 px-6">
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-blue-600 pl-4">Popüler Parçalar</h2>
-            <a href="#" class="text-blue-600 font-bold hover:underline">Tümünü Gör <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="bg-white border rounded-2xl p-4 part-card overflow-hidden transition hover:border-blue-300">
-                <div class="h-48 flex items-center justify-center mb-4">
-                    <img src="https://images.unsplash.com/photo-1486001029693-0d741160a2e6?auto=format&fit=crop&q=80&w=400" alt="Filtre" class="max-h-full transition duration-500">
+        <h2 class="text-3xl font-bold text-center mb-12 italic">HYUNDAI YEDEK PARÇA GRUPLARI</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-2xl border-b-4 border-blue-900 shadow-sm hover:shadow-xl transition text-center group">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-900 group-hover:text-white transition">
+                    <i class="fas fa-car-crash text-2xl"></i>
                 </div>
-                <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded font-bold uppercase">Hyundai Orijinal</span>
-                <h3 class="font-bold mt-2 text-gray-800">Yağ Filtresi - i20/i30 (26300-35505)</h3>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-2xl font-black text-blue-900">450 TL</span>
-                    <button class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700"><i class="fas fa-cart-plus"></i></button>
-                </div>
+                <h4 class="font-bold">Kaporta & Aydınlatma</h4>
             </div>
-            <div class="bg-white border rounded-2xl p-4 part-card overflow-hidden transition hover:border-blue-300">
-                <div class="h-48 flex items-center justify-center mb-4">
-                    <img src="https://images.unsplash.com/photo-1621245023377-5f73966606a4?auto=format&fit=crop&q=80&w=400" alt="Disk" class="max-h-full transition duration-500">
+            <div class="bg-white p-8 rounded-2xl border-b-4 border-blue-900 shadow-sm hover:shadow-xl transition text-center group">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-900 group-hover:text-white transition">
+                    <i class="fas fa-microchip text-2xl"></i>
                 </div>
-                <span class="text-[10px] bg-gray-100 text-gray-600 px-2 py-1 rounded font-bold uppercase">Mando (OEM)</span>
-                <h3 class="font-bold mt-2 text-gray-800">Ön Fren Disk Takımı - Tucson 2021+</h3>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-2xl font-black text-blue-900">3.250 TL</span>
-                    <button class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700"><i class="fas fa-cart-plus"></i></button>
+                <h4 class="font-bold">Beyin & Elektronik</h4>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border-b-4 border-blue-900 shadow-sm hover:shadow-xl transition text-center group">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-900 group-hover:text-white transition">
+                    <i class="fas fa-tools text-2xl"></i>
                 </div>
+                <h4 class="font-bold">Motor Parçaları</h4>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border-b-4 border-blue-900 shadow-sm hover:shadow-xl transition text-center group">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-900 group-hover:text-white transition">
+                    <i class="fas fa-cogs text-2xl"></i>
+                </div>
+                <h4 class="font-bold">Şanzıman & Aktarma</h4>
             </div>
         </div>
     </section>
 
-    <a href="https://wa.me/905000000000" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all z-[100] animate-bounce">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
-
-    <footer class="bg-[#001a38] text-white py-12 px-6">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-                <h4 class="text-2xl font-bold mb-6 italic underline">CİHAT HYUNDAI</h4>
-                <p class="text-blue-200 mb-4">Hyundai marka araçlarınız için sadece en kaliteli yedek parçaları sunuyoruz. Uzman kadromuzla teknik destek sağlıyoruz.</p>
-                <div class="flex gap-4">
-                    <i class="fab fa-cc-visa text-3xl opacity-50"></i>
-                    <i class="fab fa-cc-mastercard text-3xl opacity-50"></i>
-                    <i class="fab fa-cc-apple-pay text-3xl opacity-50"></i>
+    <section class="bg-gray-100 py-16 px-6">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-hyundai-blue italic">Bize Ulaşın</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <i class="fas fa-map-marker-alt mt-1 text-red-600 text-xl"></i>
+                        <p class="text-lg">Serhat Mahallesi 1126. Cadde,<br>Ayyıldız Sanayi Sitesi No:14,<br>06200 Yenimahalle/Ankara</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+                        <p class="text-lg font-bold">0553 738 38 06 / 0534 844 18 61</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fab fa-whatsapp text-green-600 text-2xl font-bold"></i>
+                        <p class="text-lg font-bold">0553 738 38 06</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h4 class="text-xl font-bold mb-6">Hızlı Bağlantılar</h4>
-                <ul class="space-y-3 text-blue-200">
-                    <li><a href="#" class="hover:text-white transition">&rsaquo; Şasi ile Parça Sorgulama</a></li>
-                    <li><a href="#" class="hover:text-white transition">&rsaquo; Toptan Satış Talebi</a></li>
-                    <li><a href="#" class="hover:text-white transition">&rsaquo; Kargo Takip</a></li>
-                    <li><a href="#" class="hover:text-white transition">&rsaquo; İade Koşulları</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-bold mb-6">Depo & İletişim</h4>
-                <p class="text-blue-200"><i class="fas fa-map-marker-alt mr-2 text-blue-400"></i> Oto Sanayi Sitesi, B Blok No:45</p>
-                <p class="text-blue-200 mt-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> info@cihathyundai.com</p>
-                <p class="text-2xl font-bold mt-4 text-white italic underline">0212 000 00 00</p>
+            <div class="h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.2655077221!2d32.748!3d39.969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzluntU4JzA4LjQiTiAzMsKwNDQnNTIuOCJF!5e0!3m2!1str!2str!4v1650000000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-        <div class="border-t border-blue-900 mt-12 pt-8 text-center text-blue-400 text-sm">
-            &copy; 2026 Cihat Hyundai Oto Yedek Parça. Tüm Hakları Saklıdır.
+    </section>
+
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <p class="text-2xl font-black italic tracking-tighter">CİHAT <span class="text-red-600 underline">HYUNDAI</span></p>
+                <p class="text-gray-500 text-sm mt-2">Hyundai Oto Yedek Parça Çözüm Merkezi</p>
+            </div>
+            <div class="flex gap-6 text-2xl">
+                <a href="https://instagram.com/cihathyundai" target="_blank" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/cihathyundai" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/905537383806" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm">© 2026 Cihat Hyundai. Tüm Hakları Saklıdır.</p>
         </div>
     </footer>
+
+    <a href="https://wa.me/905537383806" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
 </body>
 </html>
