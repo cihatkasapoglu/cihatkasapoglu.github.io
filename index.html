@@ -164,7 +164,7 @@
     <header>
         <div class="container flex-between header-flex">
             <div class="logo">
-                <a href="javascript:void(0)" onclick="resetFilter()">
+                <a href="javascript:void(0)" onclick="initVitrin()">
                     <img src="cihat-hyundai-yedek-parca.png" alt="Cihat Hyundai" onerror="this.src='https://via.placeholder.com/250x70?text=CIHAT+HYUNDAI'">
                 </a>
             </div>
@@ -183,7 +183,7 @@
     <nav>
         <div class="container">
             <ul class="nav-list">
-                <li><a href="#" onclick="resetFilter()">Anasayfa</a></li>
+                <li><a href="#" onclick="initVitrin()">Anasayfa</a></li>
                 <li><a href="#" onclick="toggleBrand('hyundai')">Hyundai Parçaları</a></li>
                 <li><a href="#" onclick="toggleBrand('kia')">Kia Parçaları</a></li>
                 <li><a href="#" class="nav-sandik" onclick="filterByModel('motor')">SIFIR SANDIK MOTOR</a></li>
@@ -195,7 +195,7 @@
     <div class="container main-layout">
         
         <aside id="main-sidebar">
-            <button class="btn-special bg-all" onclick="resetFilter()">TÜM ÜRÜNLER</button>
+            <button class="btn-special bg-all" onclick="showAll()">TÜM ÜRÜNLER</button>
             <button class="btn-special bg-motor" onclick="filterByModel('motor')">SANDIK MOTOR BÖLÜMÜ</button>
 
             <button class="accordion-btn" onclick="togglePanel('panel-hyundai')">
@@ -298,8 +298,7 @@
             "Stonic", "Niro", "Bongo", "Pregio", "EV6", "EV9", "XCeed"
         ];
 
-        // --- 2. ÜRÜNLER (Çoklu Fotoğraflı Yapı) ---
-        // images: [...] içine istediğin kadar resim adı yazabilirsin.
+        // --- 2. ÜRÜNLER (Senin Eklediklerin Aynen Duruyor) ---
         const products = [
             {
                 id: 1,
@@ -350,6 +349,25 @@
         const kPanel = document.getElementById('panel-kia');
         const grid = document.getElementById('product-grid');
         const titleArea = document.getElementById('category-title');
+
+        // YENİ EKLENEN VİTRİN VE TÜMÜNÜ GÖSTER FONKSİYONLARI
+        function initVitrin() {
+            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
+            
+            titleArea.innerText = "Vitrin Ürünleri";
+            
+            // Listenin sadece ilk 6 elemanını alır
+            const vitrinUrunleri = products.slice(0, 6); 
+            
+            displayProducts(vitrinUrunleri);
+        }
+
+        function showAll() {
+            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
+            
+            titleArea.innerText = "Stoktaki Tüm Ürünler";
+            displayProducts(products); // Hepsini gösterir
+        }
 
         // Yan Menü Doldurma
         function populateSidebar() {
@@ -513,12 +531,6 @@
             if(window.innerWidth < 768) document.querySelector('.products-section').scrollIntoView({behavior:'smooth'});
         }
 
-        function resetFilter() {
-            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
-            titleArea.innerText = "Vitrin Ürünleri";
-            displayProducts(products);
-        }
-
         function searchProduct() {
             if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             const q = document.getElementById('searchInput').value.toLowerCase();
@@ -532,7 +544,9 @@
         // --- BAŞLANGIÇ ---
         window.onload = function() {
             populateSidebar();
-            displayProducts(products);
+            
+            // BAŞLANGIÇTA SADECE VİTRİN (İLK 6) GELSİN
+            initVitrin(); 
 
             const urlParams = new URLSearchParams(window.location.search);
             const productParam = urlParams.get('urun'); 
