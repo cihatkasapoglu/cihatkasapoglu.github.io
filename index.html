@@ -298,7 +298,7 @@
             "Stonic", "Niro", "Bongo", "Pregio", "EV6", "EV9", "XCeed"
         ];
 
-        // --- 2. ÜRÜNLER (Senin Eklediklerin Aynen Duruyor) ---
+        // --- 2. ÜRÜNLER (Aynen Korundu) ---
         const products = [
             {
                 id: 1,
@@ -519,14 +519,19 @@
             });
         }
 
+        // --- DÜZELTİLEN FONKSİYON BURADA ---
         function filterByModel(model) {
             if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             
             titleArea.innerText = (model === 'motor') ? "Sıfır Sandık Motorlar" : model + " Parçaları";
+            
+            // BURASI DEĞİŞTİ: Artık tam eşleşme (===) kullanılıyor.
+            // Accent, Accent Era'yı getirmez.
             const filtered = products.filter(p => 
-                p.category.toLowerCase().includes(model.toLowerCase()) || 
+                p.category === model || 
                 (model === 'motor' && p.category === 'motor')
             );
+            
             displayProducts(filtered);
             if(window.innerWidth < 768) document.querySelector('.products-section').scrollIntoView({behavior:'smooth'});
         }
