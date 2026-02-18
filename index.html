@@ -47,30 +47,23 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* --- ÜST BİLGİ & HEADER --- */
+        /* --- HEADER & NAV --- */
         .top-bar { background: var(--dark); color: white; padding: 8px 0; font-size: 0.85rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         
-        .market-btns a {
-            padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-left: 5px; display: inline-block;
-        }
+        .market-btns a { padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-left: 5px; display: inline-block; }
         .btn-sahibinden { background: #ffe800; color: #000; }
         .btn-otocikma { background: #ff9800; color: white; }
 
         header { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
         .logo img { height: 60px; max-width: 100%; object-fit: contain; }
         
-        .search-box {
-            flex: 1; max-width: 500px; margin: 0 20px; position: relative;
-        }
-        .search-box input {
-            width: 100%; padding: 12px 20px; border: 2px solid #eee; border-radius: 50px; outline: none; transition: 0.3s;
-        }
+        .search-box { flex: 1; max-width: 500px; margin: 0 20px; position: relative; }
+        .search-box input { width: 100%; padding: 12px 20px; border: 2px solid #eee; border-radius: 50px; outline: none; transition: 0.3s; }
         .search-box input:focus { border-color: var(--primary); }
         .search-box i { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #999; }
 
-        /* --- NAVİGASYON --- */
         nav { background: var(--primary); overflow-x: auto; }
         .nav-list { display: flex; white-space: nowrap; }
         .nav-list a { display: block; padding: 15px 20px; color: white; font-weight: 500; transition: 0.3s; }
@@ -79,65 +72,62 @@
 
         /* --- ANA YAPI --- */
         .main-layout { display: flex; margin: 30px auto; gap: 30px; align-items: flex-start; }
-        
         aside { flex: 0 0 260px; background: white; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); overflow: hidden; }
         
-        .accordion-btn {
-            width: 100%; text-align: left; padding: 15px; background: #fff; border: none; border-bottom: 1px solid #eee;
-            font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-        }
-        .accordion-btn:hover { background: #f9f9f9; }
-        
-        .panel { display: none; background-color: white; max-height: 400px; overflow-y: auto; padding: 0; }
-        .panel button {
-            width: 100%; text-align: left; padding: 10px 20px; background: none; border: none;
-            font-size: 0.9rem; color: #555; border-bottom: 1px solid #f5f5f5; cursor: pointer; transition: 0.2s;
-        }
+        .accordion-btn { width: 100%; text-align: left; padding: 15px; background: #fff; border: none; border-bottom: 1px solid #eee; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .panel { display: none; background-color: white; max-height: 400px; overflow-y: auto; }
+        .panel button { width: 100%; text-align: left; padding: 10px 20px; background: none; border: none; font-size: 0.9rem; color: #555; border-bottom: 1px solid #f5f5f5; cursor: pointer; transition: 0.2s; }
         .panel button:hover { padding-left: 25px; color: var(--secondary); background: #fafafa; }
         
-        .btn-special {
-            width: 100%; padding: 15px; text-align: center; color: white; font-weight: bold; cursor: pointer; border: none; display: block;
-        }
+        .btn-special { width: 100%; padding: 15px; text-align: center; color: white; font-weight: bold; cursor: pointer; border: none; display: block; }
         .bg-motor { background: linear-gradient(45deg, #d31027, #ea384d); }
         .bg-all { background: var(--dark); margin-bottom: 10px; }
 
+        /* --- LİSTE GÖRÜNÜMÜ --- */
         .products-section { flex: 1; }
         .section-title { font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
-        .card {
-            background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; position: relative; cursor: pointer;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         
-        .card-img { height: 180px; background: #eee; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; position: relative; cursor: pointer; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card-img { height: 180px; background: #eee; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
         .card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .card-badge { position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
         
         .card-body { padding: 15px; }
         .c-cat { font-size: 0.75rem; text-transform: uppercase; color: #888; letter-spacing: 1px; margin-bottom: 5px; }
         .c-title { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: #333; line-height: 1.4; }
         
-        .btn-whatsapp {
-            display: block; width: 100%; padding: 10px; background: var(--whatsapp); color: white; text-align: center;
-            border-radius: 5px; font-weight: bold; margin-top: 10px;
-        }
+        .btn-whatsapp { display: block; width: 100%; padding: 10px; background: var(--whatsapp); color: white; text-align: center; border-radius: 5px; font-weight: bold; margin-top: 10px; }
         .btn-whatsapp:hover { background: #1ebc57; }
 
-        /* --- ÜRÜN DETAY SAYFASI (GİZLİ BAŞLAR) --- */
+        /* --- DETAY SAYFASI (YENİ GALERİLİ) --- */
         #product-detail-view { display: none; background: white; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); padding: 30px; }
         .detail-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
         .btn-back { background: #eee; color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; border:none; cursor: pointer; }
-        .btn-back:hover { background: #ddd; }
         
         .detail-content { display: flex; gap: 30px; flex-wrap: wrap; }
-        .detail-img-box { flex: 1; min-width: 300px; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
-        .detail-img-box img { width: 100%; height: auto; object-fit: contain; }
         
+        /* Galeri Sol Taraf */
+        .gallery-container { flex: 1; min-width: 300px; }
+        .main-image-box { 
+            width: 100%; height: 350px; border: 1px solid #eee; border-radius: 8px; 
+            display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px; background: #fafafa;
+        }
+        .main-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .thumbnails { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
+        .thumb { 
+            width: 70px; height: 70px; border: 2px solid #ddd; border-radius: 4px; 
+            cursor: pointer; opacity: 0.6; object-fit: cover; transition: 0.2s;
+        }
+        .thumb:hover, .thumb.active { border-color: var(--secondary); opacity: 1; }
+
+        /* Detay Sağ Taraf */
         .detail-info { flex: 1; min-width: 300px; }
         .d-cat { color: var(--secondary); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; }
         .d-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
         .d-desc { color: #555; line-height: 1.6; margin-bottom: 30px; background: #f9f9f9; padding: 15px; border-left: 4px solid var(--secondary); border-radius: 4px; }
-        
         .d-meta { display: flex; gap: 15px; margin-bottom: 20px; font-size: 0.9rem; color: #666; }
         .d-meta span { background: #eee; padding: 5px 10px; border-radius: 4px; }
 
@@ -147,13 +137,12 @@
         .f-title { color: white; font-size: 1.2rem; margin-bottom: 20px; }
         .socials a { font-size: 1.5rem; margin-right: 15px; color: white; }
 
-        /* MOBİL UYUM */
         @media (max-width: 768px) {
             .main-layout { flex-direction: column; }
-            aside { width: 100%; }
+            aside { width: 100%; margin-bottom: 20px; }
+            .detail-content { flex-direction: column; }
             .header-flex { flex-direction: column; gap: 15px; text-align: center; }
             .search-box { width: 100%; margin: 10px 0; }
-            .detail-content { flex-direction: column; }
         }
     </style>
 </head>
@@ -180,7 +169,7 @@
                 </a>
             </div>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Parça veya Model Ara (Örn: Accent Far)..." onkeyup="searchProduct()">
+                <input type="text" id="searchInput" placeholder="Parça veya Model Ara..." onkeyup="searchProduct()">
                 <i class="fa fa-search"></i>
             </div>
             <div class="whatsapp-btn-top">
@@ -221,6 +210,7 @@
         </aside>
 
         <section class="products-section">
+            
             <div id="list-view">
                 <h2 id="category-title" class="section-title">Vitrin Ürünleri</h2>
                 <div id="product-grid" class="grid">
@@ -232,10 +222,16 @@
                     <button class="btn-back" onclick="closeProduct()"><i class="fa fa-arrow-left"></i> Listeye Dön</button>
                     <span style="color:#999; font-size:0.9rem;">Ürün ID: <span id="d-id"></span></span>
                 </div>
+                
                 <div class="detail-content">
-                    <div class="detail-img-box">
-                        <img id="d-img" src="" alt="">
+                    <div class="gallery-container">
+                        <div class="main-image-box">
+                            <img id="d-main-img" src="" alt="">
+                        </div>
+                        <div class="thumbnails" id="d-thumbnails">
+                            </div>
                     </div>
+
                     <div class="detail-info">
                         <div id="d-cat" class="d-cat"></div>
                         <h1 id="d-title" class="d-title"></h1>
@@ -252,21 +248,20 @@
                             <i class="fab fa-whatsapp"></i> Fiyat Al & Sipariş Ver
                         </a>
                         <p style="margin-top:15px; font-size:0.85rem; color:#888;">
-                            * Fiyatlarımız döviz kuruna ve stok durumuna göre değişebilmektedir. Lütfen WhatsApp üzerinden güncel fiyat alınız.
+                            * Fiyatlarımız döviz kuruna göre değişebilmektedir. Lütfen WhatsApp üzerinden güncel fiyat alınız.
                         </p>
                     </div>
                 </div>
             </div>
 
         </section>
-
     </div>
 
     <footer id="footer">
         <div class="container footer-cols">
             <div>
                 <h3 class="f-title">Cihat Hyundai & Kia</h3>
-                <p>Ankara'nın en kapsamlı Hyundai ve Kia yedek parça tedarikçisi. Orijinal çıkma, yan sanayi ve sıfır sandık motor seçenekleri.</p>
+                <p>Ankara'nın en kapsamlı Hyundai ve Kia yedek parça tedarikçisi. Orijinal çıkma ve sıfır sandık motor seçenekleri.</p>
                 <div class="socials" style="margin-top: 20px;">
                     <a href="https://instagram.com/cihathyundai" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://facebook.com/cihathyundai" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -274,7 +269,7 @@
             </div>
             <div>
                 <h3 class="f-title">İletişim</h3>
-                <p><i class="fa fa-map-marker-alt"></i> Serhat Mah. 1126. Cad. Ayyıldız Sanayi Sitesi No:14, 06200 Yenimahalle/Ankara</p>
+                <p><i class="fa fa-map-marker-alt"></i> Serhat Mah. 1126. Cad. No:14, 06200 Yenimahalle/Ankara</p>
                 <br>
                 <p><i class="fa fa-phone"></i> 0553 738 38 06</p>
                 <p><i class="fa fa-phone"></i> 0534 844 18 61</p>
@@ -284,7 +279,7 @@
                 <p>Pazartesi - Cmt: 08:30 - 19:00</p>
                 <p>Pazar: Kapalı</p>
                 <br>
-                <small>*Türkiye'nin her yerine anlaşmalı kargo.</small>
+                <small>*Türkiye'nin her yerine kargo.</small>
             </div>
         </div>
         <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px; margin-top: 30px;">
@@ -293,188 +288,90 @@
     </footer>
 
     <script>
-        // --- 1. MODELLER LİSTESİ ---
+        // --- 1. MODELLER ---
         const hyundaiModels = [
-            "Accent", "Accent Milenyum/Admire", "Accent Blue", "Accent Era", "Atos", 
-            "Coupe", "Elantra", "Excel", "Getz", "i10", "i20", "i30", "i40", 
-            "Ioniq", "Ioniq 6", "iX20", "Matrix", "Sonata", "Bayon", "Ioniq 5", 
-            "Ioniq 5 N", "Ioniq 9", "Inster", "ix35", "ix55", "Galloper", "Kona", 
-            "Kona Elektrik", "Santa Fe", "Terracan", "Tucson"
+            "Accent", "Accent Era", "Accent Blue", "Getz", "i10", "i20", "i30", 
+            "Elantra", "Sonata", "Tucson", "ix35", "Santa Fe", "Kona", "Staria", 
+            "H-100", "Starex", "Ioniq 5", "Ioniq 6", "Bayon"
         ];
-
         const kiaModels = [
-            "Cadenza", "Capital", "Carens", "Carnival", "Ceed", "Cerato", "Clarus", 
-            "Magentis", "Opirus", "Optima", "Picanto", "Pride", "Pro Ceed", "Rio", 
-            "Sephia", "Shuma", "Stinger", "Venga", "EV3", "EV6", "EV9", "Niro", 
-            "Niro EV", "Sorento", "Soul", "Sportage", "Stonic", "XCeed"
+            "Picanto", "Rio", "Ceed", "Cerato", "Sportage", "Sorento", "Soul", 
+            "Stonic", "Niro", "Bongo", "Pregio", "EV6", "EV9", "XCeed"
         ];
 
-        // --- 2. ÜRÜNLER VERİTABANI ---
+        // --- 2. ÜRÜNLER (Çoklu Fotoğraflı Yapı) ---
+        // images: [...] içine istediğin kadar resim adı yazabilirsin.
         const products = [
             {
                 id: 1,
-                title: "Hyundai Accent Era Ön Tampon Dolu",
+                title: "Hyundai Accent Era Ön Tampon",
                 category: "Accent Era",
-                image: "era-tampon.jpg", 
+                images: ["era-tampon-1.jpg", "era-tampon-2.jpg", "era-tampon-3.jpg"], 
                 desc: "Orijinal çıkma hatasız, sis farları dahil. Kırık kaynak yoktur. Renk seçenekleri mevcuttur."
             },
             {
                 id: 2,
                 title: "Kia Sportage 2016 Far Beyni",
                 category: "Sportage",
-                image: "sportage-far.jpg",
-                desc: "Çıkma orijinal test edilmiş ürün. Su alma sorunu yoktur. Tüm fonksiyonları çalışmaktadır."
+                images: ["sportage-beyin.jpg", "sportage-beyin-soket.jpg"],
+                desc: "Çıkma orijinal test edilmiş ürün. Su alma sorunu yoktur."
             },
             {
                 id: 3,
                 title: "1.6 CRDI Komple Sandık Motor",
                 category: "motor",
-                image: "motor1.jpg",
-                desc: "Sıfır kutusunda, Hyundai ve Kia 1.6 dizel uyumlu. Faturalı ve garantilidir. Montaj hizmetimiz vardır."
+                images: ["motor1.jpg", "motor2.jpg", "motor3.jpg"],
+                desc: "Sıfır kutusunda, Hyundai ve Kia 1.6 dizel uyumlu. Faturalı ve garantilidir."
             },
             {
                 id: 4,
                 title: "Hyundai i20 Stop Lambası Sağ",
                 category: "i20",
-                image: "i20-stop.jpg",
-                desc: "2021 model ve üzeri uyumlu ledli stop. Çatlak veya tamir yoktur. Orijinal Mobis ürünüdür."
+                images: ["i20-stop.jpg"],
+                desc: "2021 model ledli stop. Orijinal Mobis ürünüdür."
             },
             {
                 id: 5,
                 title: "Kia Rio Klima Kompresörü",
                 category: "Rio",
-                image: "rio-klima.jpg",
-                desc: "Tüm bakımları yapılmış sorunsuz kompresör. Kasnak ve bilye kontrol edilmiştir."
+                images: ["rio-klima.jpg"],
+                desc: "Tüm bakımları yapılmış sorunsuz kompresör."
             },
             {
                 id: 6,
                 title: "Hyundai Tucson Ön Panjur",
                 category: "Tucson",
-                image: "tucson-panjur.jpg",
-                desc: "Krom detaylı orijinal parça. Tırnakları sağlamdır. 2015-2018 arası kasalara uygundur."
+                images: ["tucson-panjur.jpg"],
+                desc: "Krom detaylı orijinal parça. Tırnakları sağlamdır."
             }
         ];
 
-        // --- SİSTEM DEĞİŞKENLERİ ---
+        // --- 3. FONKSİYONLAR ---
         const hPanel = document.getElementById('panel-hyundai');
         const kPanel = document.getElementById('panel-kia');
         const grid = document.getElementById('product-grid');
         const titleArea = document.getElementById('category-title');
-        
-        // --- 3. SEO FONKSİYONLARI ---
-        function updateMetaTags(title, desc, url) {
-            document.title = title + " | Cihat Hyundai";
-            document.querySelector('meta[name="description"]').setAttribute("content", desc);
-            document.querySelector('meta[property="og:title"]').setAttribute("content", title);
-            document.querySelector('meta[property="og:description"]').setAttribute("content", desc);
-            // URL güncelle (Sayfa yenilenmeden)
-            if(url) {
-                window.history.pushState({path: url}, '', url);
-            }
-        }
 
-        function updateSchema(product) {
-            const schemaScript = document.getElementById('product-schema');
-            if(product) {
-                // Ürün Detay Schema'sı
-                const productSchema = {
-                    "@context": "https://schema.org/",
-                    "@type": "Product",
-                    "name": product.title,
-                    "image": "https://cihathyundai.com/" + product.image, // Gerçek domain olmalı
-                    "description": product.desc,
-                    "brand": {
-                        "@type": "Brand",
-                        "name": product.category.includes('Kia') ? "Kia" : "Hyundai"
-                    },
-                    "offers": {
-                        "@type": "Offer",
-                        "url": window.location.href,
-                        "priceCurrency": "TRY",
-                        "price": "0", // Fiyat değişken olduğu için 0 veya sembolik
-                        "availability": "https://schema.org/InStock",
-                        "seller": {
-                            "@type": "Organization",
-                            "name": "Cihat Hyundai Oto Parça"
-                        }
-                    }
-                };
-                schemaScript.text = JSON.stringify(productSchema);
-            } else {
-                // Anasayfa Schema'sına Dön
-                schemaScript.text = JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "AutoPartsStore",
-                    "name": "Cihat Hyundai & Kia Yedek Parça"
-                });
-            }
-        }
-
-        // --- 4. ÜRÜN DETAYI AÇMA ---
-        function openProduct(id) {
-            const p = products.find(x => x.id == id);
-            if(!p) return;
-
-            // 1. Arayüzü Değiştir
-            document.getElementById('list-view').style.display = 'none';
-            document.getElementById('main-sidebar').style.display = 'none'; // Detayda menüyü gizleyebiliriz veya tutabiliriz, mobilde gizlemek iyidir
-            document.getElementById('product-detail-view').style.display = 'block';
-            window.scrollTo(0, 0);
-
-            // 2. İçeriği Doldur
-            document.getElementById('d-id').innerText = p.id;
-            document.getElementById('d-img').src = p.image;
-            document.getElementById('d-cat').innerText = p.category + " Yedek Parça";
-            document.getElementById('d-title').innerText = p.title;
-            document.getElementById('d-desc').innerText = p.desc;
-
-            // WhatsApp Linki
-            const waMsg = `Merhaba, sitenizdeki "${p.title}" (ID: ${p.id}) parça için fiyat alabilir miyim?`;
-            document.getElementById('d-whatsapp').href = `https://wa.me/905537383806?text=${encodeURIComponent(waMsg)}`;
-
-            // 3. SEO ve URL Güncelle
-            // SEO dostu URL slug oluştur (türkçe karakterleri temizle)
-            const slug = p.title.toLowerCase().replace(/ /g, '-').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c');
-            const newUrl = `?urun=${p.id}-${slug}`;
-            
-            updateMetaTags(p.title, `${p.title} Ankara Cihat Hyundai güvencesiyle. ${p.desc}`, newUrl);
-            updateSchema(p);
-        }
-
-        function closeProduct() {
-            document.getElementById('product-detail-view').style.display = 'none';
-            document.getElementById('list-view').style.display = 'block';
-            
-            // Masaüstünde sidebar'ı geri getir, mobilde stil bozulmasın diye kontrol edilebilir
-            document.getElementById('main-sidebar').style.display = 'block';
-
-            // URL'i temizle
-            window.history.pushState({path: '/'}, '', window.location.pathname);
-            document.title = "Cihat Hyundai & Kia Yedek Parça | Ankara";
-            updateSchema(null);
-        }
-
-        // --- 5. LİSTELEME FONKSİYONLARI ---
+        // Yan Menü Doldurma
         function populateSidebar() {
-            hyundaiModels.forEach(model => {
+            hyundaiModels.forEach(m => {
                 const btn = document.createElement('button');
-                btn.innerText = model;
-                btn.onclick = () => filterByModel(model);
+                btn.innerText = m;
+                btn.onclick = () => filterByModel(m);
                 hPanel.appendChild(btn);
             });
-            kiaModels.forEach(model => {
+            kiaModels.forEach(m => {
                 const btn = document.createElement('button');
-                btn.innerText = model;
-                btn.onclick = () => filterByModel(model);
+                btn.innerText = m;
+                btn.onclick = () => filterByModel(m);
                 kPanel.appendChild(btn);
             });
         }
 
+        // Akordeon Menü
         function togglePanel(id) {
             const panel = document.getElementById(id);
-            document.querySelectorAll('.panel').forEach(p => {
-                if(p.id !== id) p.style.display = 'none';
-            });
+            document.querySelectorAll('.panel').forEach(p => { if(p.id !== id) p.style.display = 'none'; });
             panel.style.display = (panel.style.display === "block") ? "none" : "block";
         }
 
@@ -488,25 +385,116 @@
             }
         }
 
+        // SEO ve URL Güncelleme
+        function updateMetaTags(title, desc, url) {
+            document.title = title + " | Cihat Hyundai";
+            document.querySelector('meta[name="description"]').setAttribute("content", desc);
+            if(url) window.history.pushState({path: url}, '', url);
+        }
+
+        function updateSchema(product) {
+            const schemaScript = document.getElementById('product-schema');
+            if(product) {
+                const imgUrl = product.images.length > 0 ? "https://cihathyundai.com/" + product.images[0] : "";
+                const productSchema = {
+                    "@context": "https://schema.org/",
+                    "@type": "Product",
+                    "name": product.title,
+                    "image": imgUrl,
+                    "description": product.desc,
+                    "brand": { "@type": "Brand", "name": "Hyundai/Kia" },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "TRY",
+                        "availability": "https://schema.org/InStock"
+                    }
+                };
+                schemaScript.text = JSON.stringify(productSchema);
+            }
+        }
+
+        // --- ÜRÜN DETAYI VE GALERİ ---
+        function openProduct(id) {
+            const p = products.find(x => x.id == id);
+            if(!p) return;
+
+            document.getElementById('list-view').style.display = 'none';
+            document.getElementById('main-sidebar').style.display = 'none'; // Mobilde yer açmak için
+            document.getElementById('product-detail-view').style.display = 'block';
+            window.scrollTo(0, 0);
+
+            // Verileri Doldur
+            document.getElementById('d-id').innerText = p.id;
+            document.getElementById('d-cat').innerText = p.category + " Yedek Parça";
+            document.getElementById('d-title').innerText = p.title;
+            document.getElementById('d-desc').innerText = p.desc;
+            
+            // --- Galeri Mantığı ---
+            const mainImg = document.getElementById('d-main-img');
+            const thumbContainer = document.getElementById('d-thumbnails');
+            
+            // Kapak Resmi
+            const firstImage = (p.images && p.images.length > 0) ? p.images[0] : 'https://via.placeholder.com/400';
+            mainImg.src = firstImage;
+
+            // Küçük Resimler
+            thumbContainer.innerHTML = '';
+            if(p.images && p.images.length > 0) {
+                p.images.forEach((src, index) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.className = (index === 0) ? 'thumb active' : 'thumb';
+                    img.onclick = function() {
+                        mainImg.src = this.src;
+                        document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                    };
+                    thumbContainer.appendChild(img);
+                });
+            }
+
+            // WhatsApp ve SEO
+            const waMsg = `Merhaba, "${p.title}" (ID: ${p.id}) parça için fiyat alabilir miyim?`;
+            document.getElementById('d-whatsapp').href = `https://wa.me/905537383806?text=${encodeURIComponent(waMsg)}`;
+            
+            const slug = p.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
+            updateMetaTags(p.title, p.desc, `?urun=${p.id}-${slug}`);
+            updateSchema(p);
+        }
+
+        function closeProduct() {
+            document.getElementById('product-detail-view').style.display = 'none';
+            document.getElementById('list-view').style.display = 'block';
+            document.getElementById('main-sidebar').style.display = 'block';
+            
+            window.history.pushState({path: '/'}, '', window.location.pathname);
+            document.title = "Cihat Hyundai & Kia Yedek Parça | Ankara";
+            updateSchema(null);
+        }
+
+        // --- LİSTELEME ---
         function displayProducts(items) {
             grid.innerHTML = "";
             if(items.length === 0) {
-                grid.innerHTML = "<p style='grid-column: 1/-1; text-align:center; padding:20px; color:#777;'>Bu model için şu an vitrinde ürün yok. Lütfen telefonla sorunuz.</p>";
+                grid.innerHTML = "<p style='grid-column: 1/-1; text-align:center; padding:20px; color:#777;'>Bu kriterde ürün bulunamadı.</p>";
                 return;
             }
 
             items.forEach(p => {
-                // Tıklanınca openProduct çalışacak
+                const cover = (p.images && p.images.length > 0) ? p.images[0] : 'https://via.placeholder.com/300';
+                const count = p.images ? p.images.length : 0;
+                
                 const html = `
                     <div class="card" onclick="openProduct(${p.id})">
                         <div class="card-img">
-                            <img src="${p.image}" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x200?text=Cihat+Oto+Parca'">
+                            <img src="${cover}" alt="${p.title}">
+                            ${count > 1 ? `<div class="card-badge"><i class="fa fa-images"></i> ${count}</div>` : ''}
                         </div>
                         <div class="card-body">
                             <div class="c-cat">${p.category}</div>
                             <div class="c-title">${p.title}</div>
-                            <div style="font-size:0.85rem; color:#666; margin-bottom:10px; display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${p.desc}</div>
-                            <div class="btn-whatsapp" style="padding:5px; font-size:0.9rem;">İncele & Fiyat Sor</div>
+                            <div class="btn-whatsapp" style="padding:5px; font-size:0.9rem; background:#eee; color:#333;">İncele</div>
                         </div>
                     </div>
                 `;
@@ -515,67 +503,49 @@
         }
 
         function filterByModel(model) {
-            // Eğer detay sayfasındaysak listeye dön
-            if(document.getElementById('product-detail-view').style.display === 'block') {
-                closeProduct();
-            }
+            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             
-            titleArea.innerText = model === 'motor' ? "Sıfır Sandık Motor Seçenekleri" : model + " Yedek Parçaları";
+            titleArea.innerText = (model === 'motor') ? "Sıfır Sandık Motorlar" : model + " Parçaları";
             const filtered = products.filter(p => 
                 p.category.toLowerCase().includes(model.toLowerCase()) || 
                 (model === 'motor' && p.category === 'motor')
             );
             displayProducts(filtered);
-            if(window.innerWidth < 768) {
-                document.querySelector('.products-section').scrollIntoView({behavior: 'smooth'});
-            }
+            if(window.innerWidth < 768) document.querySelector('.products-section').scrollIntoView({behavior:'smooth'});
         }
 
         function resetFilter() {
-            if(document.getElementById('product-detail-view').style.display === 'block') {
-                closeProduct();
-            }
-            titleArea.innerText = "Tüm Vitrin Ürünleri";
+            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
+            titleArea.innerText = "Vitrin Ürünleri";
             displayProducts(products);
         }
 
         function searchProduct() {
-            if(document.getElementById('product-detail-view').style.display === 'block') {
-                closeProduct();
-            }
-            const query = document.getElementById('searchInput').value.toLowerCase();
+            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
+            const q = document.getElementById('searchInput').value.toLowerCase();
             const filtered = products.filter(p => 
-                p.title.toLowerCase().includes(query) || 
-                p.category.toLowerCase().includes(query) ||
-                p.desc.toLowerCase().includes(query)
+                p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
             );
-            titleArea.innerText = `"${query}" İçin Arama Sonuçları`;
+            titleArea.innerText = "Arama Sonuçları";
             displayProducts(filtered);
         }
 
-        // --- SAYFA YÜKLENDİĞİNDE ---
+        // --- BAŞLANGIÇ ---
         window.onload = function() {
             populateSidebar();
             displayProducts(products);
 
-            // URL Kontrolü (Link paylaşılmışsa direkt ürünü aç)
             const urlParams = new URLSearchParams(window.location.search);
             const productParam = urlParams.get('urun'); 
-            
             if (productParam) {
-                // "1-hyundai-accent" stringinden ID'yi (1) al
                 const id = productParam.split('-')[0];
                 openProduct(id);
             }
-            
-            // Tarayıcı Geri Tuşu Kontrolü
-            window.onpopstate = function(event) {
-                if(document.getElementById('product-detail-view').style.display === 'block') {
-                    closeProduct();
-                }
+
+            window.onpopstate = function() {
+                if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             };
         };
-
     </script>
 </body>
 </html>
