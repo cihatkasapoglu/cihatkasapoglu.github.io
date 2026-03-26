@@ -13662,7 +13662,14 @@
         }
 
         // --- ÜRÜN DETAYI VE GALERİ ---
-        openProduct
+        function openProduct(id) {
+            const p = products.find(x => x.id == id);
+            if(!p) return;
+
+            document.getElementById('list-view').style.display = 'none';
+            document.getElementById('main-sidebar').style.display = 'none'; // Mobilde yer açmak için
+            document.getElementById('product-detail-view').style.display = 'block';
+            window.scrollTo(0, 0);
 
             // Verileri Doldur
             document.getElementById('d-id').innerText = p.id;
@@ -13726,7 +13733,7 @@
                 const count = p.images ? p.images.length : 0;
                 
                 const html = `
-                    <div class="card" onclick="openProduct('${p.slug || p.id}')">
+                    <div class="card" onclick="openProduct(${p.id})">
                         <div class="card-img">
                             <img src="${cover}" alt="${p.title}">
                             ${count > 1 ? `<div class="card-badge"><i class="fa fa-images"></i> ${count}</div>` : ''}
@@ -13773,25 +13780,20 @@
         window.onload = function() {
             populateSidebar();
             
-        // --- YENİLENMİŞ BAŞLANGIÇ ---
-        window.onload = function() {
-            populateSidebar();
+            // BAŞLANGIÇTA SADECE VİTRİN (İLK 6) GELSİN
             initVitrin(); 
 
             const urlParams = new URLSearchParams(window.location.search);
             const productParam = urlParams.get('urun'); 
-            
             if (productParam) {
-                // ARTIK PARÇALAMA (SPLIT) YAPMADAN DİREKT İSMİ GÖNDERİYORUZ
-                openProduct(productParam);
+                const id = productParam.split('-')[0];
+                openProduct(id);
             }
 
             window.onpopstate = function() {
-                if(document.getElementById('product-detail-view').style.display === 'block') {
-                    closeProduct();
-                }
+                if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             };
-        
+        };
     </script>
 </body>
 </html>
