@@ -4,301 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cihat Hyundai & Kia Yedek Parça | Ankara</title>
-    <meta name="description" content="Ankara Ostim Yıldız Sanayi'de Hyundai ve Kia tüm modeller için orijinal çıkma yedek parça, sıfır sandık motor. Cihat Hyundai güvencesiyle.">
-    <meta name="keywords" content="hyundai yedek parça, kia yedek parça, sandık motor, accent yedek parça, i20 yedek parça, sportage yedek parça">
-    
-    <meta property="og:title" content="Cihat Hyundai & Kia Yedek Parça">
-    <meta property="og:description" content="Orijinal çıkma yedek parça ve sandık motor çözümleri.">
-    <meta property="og:image" content="cihat-logo.png">
-    <meta property="og:url" content="https://cihathyundai.com">
-    
+    <meta name="description" content="Ankara Ostim'de Hyundai ve Kia modelleri için orijinal çıkma yedek parça ve sandık motor çözümleri.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <script type="application/ld+json" id="product-schema">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoPartsStore",
-      "name": "Cihat Hyundai & Kia Yedek Parça",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Serhat Mah. 1126. Cad. No: 14",
-        "addressLocality": "Yenimahalle",
-        "addressRegion": "Ankara",
-        "postalCode": "06200",
-        "addressCountry": "TR"
-      },
-      "telephone": "+905537383806",
-      "openingHours": "Mo-Sa 08:30-19:00"
-    }
-    </script>
-
     <style>
-        :root {
-            --primary: #002c5f;
-            --secondary: #c4172c;
-            --dark: #222;
-            --light: #f8f9fa;
-            --whatsapp: #25D366;
-            --border: #ddd;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f0f2f5; color: #333; }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
-        /* --- HEADER & NAV --- */
-        .top-bar { background: var(--dark); color: white; padding: 8px 0; font-size: 0.85rem; }
+        :root { --primary: #002c5f; --secondary: #c4172c; --dark: #222; --light: #f8f9fa; --whatsapp: #25D366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f0f2f5; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        
-        .market-btns a { padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-left: 5px; display: inline-block; }
-        .btn-sahibinden { background: #ffe800; color: #000; }
-        .btn-otocikma { background: #ff9800; color: white; }
-
         header { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
-        .logo img { height: 60px; max-width: 100%; object-fit: contain; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
         
-        .search-box { flex: 1; max-width: 500px; margin: 0 20px; position: relative; }
-        .search-box input { width: 100%; padding: 12px 20px; border: 2px solid #eee; border-radius: 50px; outline: none; transition: 0.3s; }
-        .search-box input:focus { border-color: var(--primary); }
-        .search-box i { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #999; }
-
-        nav { background: var(--primary); overflow-x: auto; }
-        .nav-list { display: flex; white-space: nowrap; }
-        .nav-list a { display: block; padding: 15px 20px; color: white; font-weight: 500; transition: 0.3s; }
-        .nav-list a:hover { background: rgba(255,255,255,0.1); }
-        .nav-sandik { background: var(--secondary); }
-
-        /* --- ANA YAPI --- */
-        .main-layout { display: flex; margin: 30px auto; gap: 30px; align-items: flex-start; }
-        aside { flex: 0 0 260px; background: white; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); overflow: hidden; }
-        
-        .accordion-btn { width: 100%; text-align: left; padding: 15px; background: #fff; border: none; border-bottom: 1px solid #eee; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        /* Yan Menü Stilleri */
+        aside { flex: 0 0 260px; background: white; border-radius: 8px; overflow: hidden; height: fit-content; }
+        .accordion-btn { width: 100%; text-align: left; padding: 15px; background: #fff; border: none; border-bottom: 1px solid #eee; font-weight: bold; cursor: pointer; }
         .panel { display: none; background-color: white; max-height: 400px; overflow-y: auto; }
-        .panel button { width: 100%; text-align: left; padding: 10px 20px; background: none; border: none; font-size: 0.9rem; color: #555; border-bottom: 1px solid #f5f5f5; cursor: pointer; transition: 0.2s; }
-        .panel button:hover { padding-left: 25px; color: var(--secondary); background: #fafafa; }
-        
-        .btn-special { width: 100%; padding: 15px; text-align: center; color: white; font-weight: bold; cursor: pointer; border: none; display: block; }
-        .bg-motor { background: linear-gradient(45deg, #d31027, #ea384d); }
-        .bg-all { background: var(--dark); margin-bottom: 10px; }
+        .panel button { width: 100%; text-align: left; padding: 10px 20px; background: none; border: none; border-bottom: 1px solid #f5f5f5; cursor: pointer; }
+        .panel button:hover { background: #fafafa; color: var(--secondary); }
 
-        /* --- LİSTE GÖRÜNÜMÜ --- */
-        .products-section { flex: 1; }
-        .section-title { font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        /* Ürün Kartları */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
-        
-        .card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; position: relative; cursor: pointer; }
+        .card { background: white; border-radius: 8px; overflow: hidden; cursor: pointer; transition: 0.3s; border: 1px solid #eee; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .card-img { height: 180px; background: #eee; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .card-badge { position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+        .card-img { height: 180px; display: flex; align-items: center; justify-content: center; background: #f9f9f9; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: cover; }
         
-        .card-body { padding: 15px; }
-        .c-cat { font-size: 0.75rem; text-transform: uppercase; color: #888; letter-spacing: 1px; margin-bottom: 5px; }
-        .c-title { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: #333; line-height: 1.4; }
+        /* Detay Sayfası */
+        #product-detail-view { display: none; background: white; padding: 30px; border-radius: 8px; }
+        .btn-whatsapp { display: block; width: 100%; padding: 15px; background: var(--whatsapp); color: white; text-align: center; border-radius: 5px; font-weight: bold; margin-top: 20px; text-decoration: none; }
         
-        .btn-whatsapp { display: block; width: 100%; padding: 10px; background: var(--whatsapp); color: white; text-align: center; border-radius: 5px; font-weight: bold; margin-top: 10px; }
-        .btn-whatsapp:hover { background: #1ebc57; }
-
-        /* --- DETAY SAYFASI --- */
-        #product-detail-view { display: none; background: white; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); padding: 30px; }
-        .detail-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .btn-back { background: #eee; color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; border:none; cursor: pointer; }
-        
-        .detail-content { display: flex; gap: 30px; flex-wrap: wrap; }
-        
-        /* Galeri Sol Taraf */
-        .gallery-container { flex: 1; min-width: 300px; }
-        .main-image-box { 
-            width: 100%; height: 350px; border: 1px solid #eee; border-radius: 8px; 
-            display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px; background: #fafafa;
-        }
-        .main-image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        
-        .thumbnails { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
-        .thumb { 
-            width: 70px; height: 70px; border: 2px solid #ddd; border-radius: 4px; 
-            cursor: pointer; opacity: 0.6; object-fit: cover; transition: 0.2s;
-        }
-        .thumb:hover, .thumb.active { border-color: var(--secondary); opacity: 1; }
-
-        /* Detay Sağ Taraf */
-        .detail-info { flex: 1; min-width: 300px; }
-        .d-cat { color: var(--secondary); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; }
-        .d-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
-        .d-desc { color: #555; line-height: 1.6; margin-bottom: 30px; background: #f9f9f9; padding: 15px; border-left: 4px solid var(--secondary); border-radius: 4px; }
-        .d-meta { display: flex; gap: 15px; margin-bottom: 20px; font-size: 0.9rem; color: #666; }
-        .d-meta span { background: #eee; padding: 5px 10px; border-radius: 4px; }
-
-        /* FOOTER */
-        footer { background: #1a1a1a; color: #aaa; padding: 50px 0; margin-top: 50px; }
-        .footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .f-title { color: white; font-size: 1.2rem; margin-bottom: 20px; }
-        .socials a { font-size: 1.5rem; margin-right: 15px; color: white; }
-
-        @media (max-width: 768px) {
-            .main-layout { flex-direction: column; }
-            aside { width: 100%; margin-bottom: 20px; }
-            .detail-content { flex-direction: column; }
-            .header-flex { flex-direction: column; gap: 15px; text-align: center; }
-            .search-box { width: 100%; margin: 10px 0; }
-        }
+        @media (max-width: 768px) { .main-layout { flex-direction: column; } aside { width: 100%; } }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="container flex-between">
-            <div>
-                <i class="fa fa-phone"></i> 0553 738 38 06 &nbsp;|&nbsp; 
-                <i class="fa fa-phone"></i> 0534 844 18 61
-            </div>
-            <div class="market-btns">
-                <a href="https://cihathyundai.sahibinden.com" target="_blank" class="btn-sahibinden">sahibinden.com mağazaya git</a>
-                <a href="https://cihathyundai.otocikma.com" target="_blank" class="btn-otocikma">otocikma.com mağazaya git</a>
-            </div>
-        </div>
-    </div>
-
     <header>
-        <div class="container flex-between header-flex">
-            <div class="logo">
-                <a href="javascript:void(0)" onclick="initVitrin()">
-                    <img src="cihat-hyundai-yedek-parca.png" alt="Cihat Hyundai" onerror="this.src='https://via.placeholder.com/250x70?text=CIHAT+HYUNDAI'">
-                </a>
-            </div>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Parça veya Model Ara..." onkeyup="searchProduct()">
-                <i class="fa fa-search"></i>
-            </div>
-            <div class="whatsapp-btn-top">
-                <a href="https://wa.me/905537383806" class="btn-whatsapp" style="border-radius: 50px; padding: 8px 20px;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Destek
-                </a>
+        <div class="container flex-between">
+            <div class="logo"><a href="index.html"><strong>CİHAT HYUNDAI</strong></a></div>
+            <div style="flex:1; max-width:400px; margin:0 20px;">
+                <input type="text" id="searchInput" placeholder="Parça Ara..." onkeyup="searchProduct()" style="width:100%; padding:10px; border-radius:20px; border:1px solid #ddd;">
             </div>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul class="nav-list">
-                <li><a href="#" onclick="initVitrin()">Anasayfa</a></li>
-                <li><a href="#" onclick="toggleBrand('hyundai')">Hyundai Parçaları</a></li>
-                <li><a href="#" onclick="toggleBrand('kia')">Kia Parçaları</a></li>
-                <li><a href="#" class="nav-sandik" onclick="filterByModel('motor')">SIFIR SANDIK MOTOR</a></li>
-                <li><a href="#footer">İletişim & Konum</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container main-layout">
+    <div class="container main-layout" style="display:flex; gap:25px; margin-top:30px;">
         
         <aside id="main-sidebar">
-            <button class="btn-special bg-all" onclick="showAll()">TÜM ÜRÜNLER</button>
-            <button class="btn-special bg-motor" onclick="filterByModel('motor')">SANDIK MOTOR BÖLÜMÜ</button>
-
-            <button class="accordion-btn" onclick="togglePanel('panel-hyundai')">
-                HYUNDAI MODELLERİ <i class="fa fa-chevron-down"></i>
-            </button>
+            <button style="width:100%; padding:15px; background:var(--dark); color:white; border:none; cursor:pointer; font-weight:bold;" onclick="showAll()">TÜM ÜRÜNLER</button>
+            
+            <button class="accordion-btn" onclick="togglePanel('panel-hyundai')">HYUNDAI MODELLERİ <i class="fa fa-chevron-down"></i></button>
             <div id="panel-hyundai" class="panel"></div>
 
-            <button class="accordion-btn" onclick="togglePanel('panel-kia')">
-                KIA MODELLERİ <i class="fa fa-chevron-down"></i>
-            </button>
+            <button class="accordion-btn" onclick="togglePanel('panel-kia')">KIA MODELLERİ <i class="fa fa-chevron-down"></i></button>
             <div id="panel-kia" class="panel"></div>
         </aside>
 
-        <section class="products-section">
-            
+        <section style="flex:1;">
             <div id="list-view">
-                <h2 id="category-title" class="section-title">Vitrin Ürünleri</h2>
-                <div id="product-grid" class="grid">
-                    </div>
+                <h2 id="category-title" style="margin-bottom:20px; color:var(--primary);">Vitrin Ürünleri</h2>
+                <div id="product-grid" class="grid"></div>
             </div>
 
             <div id="product-detail-view">
-                <div class="detail-header">
-                    <button class="btn-back" onclick="closeProduct()"><i class="fa fa-arrow-left"></i> Listeye Dön</button>
-                    <span style="color:#999; font-size:0.9rem;">Ürün ID: <span id="d-id"></span></span>
-                </div>
-                
-                <div class="detail-content">
-                    <div class="gallery-container">
-                        <div class="main-image-box">
-                            <img id="d-main-img" src="" alt="">
-                        </div>
-                        <div class="thumbnails" id="d-thumbnails">
-                            </div>
-                    </div>
-
-                    <div class="detail-info">
-                        <div id="d-cat" class="d-cat"></div>
-                        <h1 id="d-title" class="d-title"></h1>
-                        
-                        <div class="d-meta">
-                            <span><i class="fa fa-check-circle"></i> Stokta Var</span>
-                            <span><i class="fa fa-truck"></i> Kargo İmkanı</span>
-                            </div>
-
-                        <div id="d-desc" class="d-desc"></div>
-
-                        <a id="d-whatsapp" href="#" target="_blank" class="btn-whatsapp" style="font-size: 1.1rem; padding: 15px;">
-                            <i class="fab fa-whatsapp"></i> Fiyat Al & Sipariş Ver
-                        </a>
-                        <p style="margin-top:15px; font-size:0.85rem; color:#888;">
-                            * Lütfen WhatsApp üzerinden güncel stok ve fiyat bilgisi alınız.
-                        </p>
+                <button onclick="closeProduct()" style="margin-bottom:20px; cursor:pointer; padding:8px 15px;">← Listeye Dön</button>
+                <div style="display:flex; gap:30px; flex-wrap:wrap;">
+                    <div style="flex:1; min-width:300px;"><img id="d-main-img" src="" style="width:100%; border-radius:8px;"></div>
+                    <div style="flex:1; min-width:300px;">
+                        <h1 id="d-title"></h1>
+                        <p id="d-desc" style="margin:20px 0; line-height:1.6; color:#555;"></p>
+                        <a id="d-whatsapp" href="#" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Fiyat Al & Sipariş Ver</a>
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
 
-    <footer id="footer">
-        <div class="container footer-cols">
-            <div>
-                <h3 class="f-title">Cihat Hyundai & Kia</h3>
-                <p>Ankara'nın en kapsamlı Hyundai ve Kia yedek parça tedarikçisi. Orijinal çıkma ve sıfır sandık motor seçenekleri.</p>
-                <div class="socials" style="margin-top: 20px;">
-                    <a href="https://instagram.com/cihathyundai" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com/cihathyundai" target="_blank"><i class="fab fa-facebook"></i></a>
-                </div>
-            </div>
-            <div>
-                <h3 class="f-title">İletişim</h3>
-                <p><i class="fa fa-map-marker-alt"></i> Serhat Mah. 1126. Cad. No:14, 06200 Yenimahalle/Ankara</p>
-                <br>
-                <p><i class="fa fa-phone"></i> 0553 738 38 06</p>
-                <p><i class="fa fa-phone"></i> 0534 844 18 61</p>
-            </div>
-            <div>
-                <h3 class="f-title">Çalışma Saatleri</h3>
-                <p>Pazartesi - Cmt: 08:30 - 19:00</p>
-                <p>Pazar: Kapalı</p>
-                <br>
-                <small>*Türkiye'nin her yerine kargo.</small>
-            </div>
-        </div>
-        <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px; margin-top: 30px;">
-            &copy; 2026 Cihat Hyundai Yedek Parça.
-        </div>
-    </footer>
-
     <script>
-        // --- 1. MODELLER ---
-        const hyundaiModels = [
-            "Accent", "Accent Era", "Accent Blue", "Atos", "Getz", "H1", "H100", "i10", "i20", "i30", 
-            "Elantra", "Excel", "Sonata", "Tucson", "ix35", "Santa Fe", "Kona", "Matrix", "Staria", 
-            "H-100", "Starex", "Ioniq 5", "Ioniq 6", "Bayon"
-        ];
-        const kiaModels = [
-            "Picanto", "Rio", "Ceed", "Cerato", "Sportage", "Sorento", "Soul", 
-            "Stonic", "Niro", "Bongo", "Pregio", "EV6", "EV9", "XCeed"
-        ];
+        // MODELLER
+        const hyundaiModels = ["Accent", "Accent Era", "Accent Blue", "Getz", "i10", "i20", "i30", "Elantra", "Tucson", "ix35", "Kona", "H100", "Starex"];
+        const kiaModels = ["Picanto", "Rio", "Ceed", "Cerato", "Sportage", "Sorento", "Bongo"];
 
-        // --- 2. ÜRÜNLER (Aynen Korundu) ---
+        // ÜRÜNLER (B buraya B2B'den aldığın listeyi ekle)
         const products = [
             {
                 id: 1,
@@ -13571,177 +13357,200 @@
     images: ["images-5/hyundai-ix35-10-15-karter-muhafaza-plastigi-tw-29110-2s000-cihat-hyundai.jpg"],
     desc: "HYUNDAI IX35- 10/15; KARTER MUHAFAZA PLASTİĞİ (TW), ix35 araçlar için uyumlu Yedek Parça ürünüdür. IX35 model araçlar ile uyumludur. OEM Kodu: 29110-2S000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi ix35 yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
 },
+{
+    id: 1951,
+    slug: "hyundai-kona-18-20-arac-bilgileri-ve-resimleri-kona-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ARAÇ BİLGİLERİ VE RESİMLERİ KONA (-)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-arac-bilgileri-ve-resimleri-kona-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ARAÇ BİLGİLERİ VE RESİMLERİ, Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: -. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1952,
+    slug: "hyundai-kona-18-20-on-ust-tampon-astarli-siyah-tyg-kona-86511j9000-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ÖN ÜST TAMPON ASTARLI SİYAH (TYG) KONA (86511J9000)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-on-ust-tampon-astarli-siyah-tyg-kona-86511j9000-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ÖN ÜST TAMPON ASTARLI SİYAH (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86511J9000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1953,
+    slug: "hyundai-kona-18-20-on-alt-tampon-siyah-tyg-kona-86510j9000-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ÖN ALT TAMPON SİYAH (TYG) KONA (86510J9000)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-on-alt-tampon-siyah-tyg-kona-86510j9000-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ÖN ALT TAMPON SİYAH (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86510J9000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1954,
+    slug: "hyundai-kona-18-20-on-camurluk-davlumbazi-sag-kona-86812-j9000-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ÖN ÇAMURLUK DAVLUMBAZI SAĞ KONA (86812-J9000)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-on-camurluk-davlumbazi-sag-kona-86812-j9000-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ÖN ÇAMURLUK DAVLUMBAZI SAĞ, Kona araçlar için uyumlu Çamurluk ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86812-J9000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1955,
+    slug: "hyundai-kona-18-20-on-camurluk-davlumbazi-sol-kona-86811-j9000-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ÖN ÇAMURLUK DAVLUMBAZI SOL KONA (86811-J9000)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-on-camurluk-davlumbazi-sol-kona-86811-j9000-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ÖN ÇAMURLUK DAVLUMBAZI SOL, Kona araçlar için uyumlu Çamurluk ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86811-J9000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1956,
+    slug: "hyundai-kona-18-20-on-panjur-siyah-tyg-kona-86350j9000-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ÖN PANJUR SİYAH (TYG) KONA (86350J9000)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-on-panjur-siyah-tyg-kona-86350j9000-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ÖN PANJUR SİYAH (TYG), Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86350J9000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1957,
+    slug: "hyundai-kona-18-20-on-panel-komple-tyg-kona-64101j9000-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ÖN PANEL KOMPLE (TYG) KONA (64101J9000)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-on-panel-komple-tyg-kona-64101j9000-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ÖN PANEL KOMPLE (TYG), Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 64101J9000. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1958,
+    slug: "hyundai-kona-18-20-arka-tampon-siyah-tyg-kona-86610j9001-cihat-hyundai",
+    title: "HYUNDAI KONA- 18/20; ARKA TAMPON SİYAH (TYG) KONA (86610J9001)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-18-20-arka-tampon-siyah-tyg-kona-86610j9001-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 18/20; ARKA TAMPON SİYAH (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86610J9001. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1959,
+    slug: "hyundai-kona-21-23-arac-bilgileri-ve-resimleri-kona-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ARAÇ BİLGİLERİ VE RESİMLERİ KONA (-)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-arac-bilgileri-ve-resimleri-kona-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ARAÇ BİLGİLERİ VE RESİMLERİ, Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: -. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1960,
+    slug: "hyundai-kona-21-23-on-ust-tampon-astarli-siyah-tyg-kona-86550-j9ca0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ÖN ÜST TAMPON ASTARLI SİYAH (TYG) KONA (86550-J9CA0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-on-ust-tampon-astarli-siyah-tyg-kona-86550-j9ca0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ÖN ÜST TAMPON ASTARLI SİYAH (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86550-J9CA0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1961,
+    slug: "hyundai-kona-21-23-on-tampon-panjuru-siyah-sis-delikli-tyg-kona-86560-j9cd0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ÖN TAMPON PANJURU SİYAH SİS DELİKLİ (TYG) KONA (86560-J9CD0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-on-tampon-panjuru-siyah-sis-delikli-tyg-kona-86560-j9cd0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ÖN TAMPON PANJURU SİYAH SİS DELİKLİ (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86560-J9CD0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1962,
+    slug: "hyundai-kona-21-23-on-alt-tampon-bandi-gri-tyg-kona-86569-j9ca0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ÖN ALT TAMPON BANDI GRİ (TYG) KONA (86569-J9CA0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-on-alt-tampon-bandi-gri-tyg-kona-86569-j9ca0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ÖN ALT TAMPON BANDI GRİ (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86569-J9CA0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1963,
+    slug: "hyundai-kona-21-23-on-panjur-siyah-tyg-kona-86350-j9cb0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ÖN PANJUR SİYAH (TYG) KONA (86350-J9CB0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-on-panjur-siyah-tyg-kona-86350-j9cb0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ÖN PANJUR SİYAH (TYG), Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86350-J9CB0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1964,
+    slug: "hyundai-kona-21-23-far-alt-citasi-sag-gumus-gri-tyg-kona-86562-j9cb0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; FAR ALT ÇITASI SAĞ GÜMÜŞ GRİ(TYG) KONA (86562-J9CB0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-far-alt-citasi-sag-gumus-gri-tyg-kona-86562-j9cb0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; FAR ALT ÇITASI SAĞ GÜMÜŞ GRİ(TYG), Kona araçlar için uyumlu Far ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86562-J9CB0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1965,
+    slug: "hyundai-kona-21-23-far-alt-citasi-sol-gumus-gri-tyg-kona-86561-j9cb0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; FAR ALT ÇITASI SOL GÜMÜŞ GRİ(TYG) KONA (86561-J9CB0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-far-alt-citasi-sol-gumus-gri-tyg-kona-86561-j9cb0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; FAR ALT ÇITASI SOL GÜMÜŞ GRİ(TYG), Kona araçlar için uyumlu Far ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86561-J9CB0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1966,
+    slug: "hyundai-kona-21-23-on-panel-plastik-tyg-kona-64101-j9500-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ÖN PANEL PLASTİK (TYG) KONA (64101-J9500)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-on-panel-plastik-tyg-kona-64101-j9500-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ÖN PANEL PLASTİK (TYG), Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 64101-J9500. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1967,
+    slug: "hyundai-kona-21-23-arka-tampon-siyah-tyg-kona-86611-j9ba0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ARKA TAMPON SİYAH (TYG) KONA (86611-J9BA0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-arka-tampon-siyah-tyg-kona-86611-j9ba0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ARKA TAMPON SİYAH (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86611-J9BA0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1968,
+    slug: "hyundai-kona-21-23-arka-tampon-bandi-gri-tyg-kona-86670-j9ba0-cihat-hyundai",
+    title: "HYUNDAI KONA- 21/23; ARKA TAMPON BANDI GRİ (TYG) KONA (86670-J9BA0)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-21-23-arka-tampon-bandi-gri-tyg-kona-86670-j9ba0-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 21/23; ARKA TAMPON BANDI GRİ (TYG), Kona araçlar için uyumlu Tampon ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: 86670-J9BA0. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
+{
+    id: 1969,
+    slug: "hyundai-kona-23-25-arac-bilgileri-ve-resimleri-kona-cihat-hyundai",
+    title: "HYUNDAI KONA- 23/25; ARAÇ BİLGİLERİ VE RESİMLERİ KONA (-)",
+    category: "Kona",
+    images: ["images-6/hyundai-kona-23-25-arac-bilgileri-ve-resimleri-kona-cihat-hyundai.jpg"],
+    desc: "HYUNDAI KONA- 23/25; ARAÇ BİLGİLERİ VE RESİMLERİ, Kona araçlar için uyumlu Yedek Parça ürünüdür. KONA model araçlar ile uyumludur. OEM Kodu: -. Yüksek kalite ve dayanıklı yapısıyla uzun ömürlü kullanım sağlar. Cihat Hyundai güvencesiyle Ankara'da stoktan hızlı teslim imkanı sunulmaktadır. Orijinal ve yan sanayi Kona yedek parça seçenekleri için bizimle iletişime geçebilirsiniz. Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara Tel: 0553 738 38 06 - 0534 844 18 61."
+},
 
    ];
-
-        // --- 3. FONKSİYONLAR ---
-        const hPanel = document.getElementById('panel-hyundai');
-        const kPanel = document.getElementById('panel-kia');
-        const grid = document.getElementById('product-grid');
-        const titleArea = document.getElementById('category-title');
-
-        // YENİ EKLENEN VİTRİN VE TÜMÜNÜ GÖSTER FONKSİYONLARI
-        function initVitrin() {
-            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
-            
-            titleArea.innerText = "Vitrin Ürünleri";
-            
-            // Listenin sadece ilk 6 elemanını alır
-            const vitrinUrunleri = products.slice(0, 6); 
-            
-            displayProducts(vitrinUrunleri);
-        }
-
-        function showAll() {
-            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
-            
-            titleArea.innerText = "Stoktaki Tüm Ürünler";
-            displayProducts(products); // Hepsini gösterir
-        }
-
-        // Yan Menü Doldurma
-        function populateSidebar() {
-            hyundaiModels.forEach(m => {
-                const btn = document.createElement('button');
-                btn.innerText = m;
-                btn.onclick = () => filterByModel(m);
-                hPanel.appendChild(btn);
-            });
-            kiaModels.forEach(m => {
-                const btn = document.createElement('button');
-                btn.innerText = m;
-                btn.onclick = () => filterByModel(m);
-                kPanel.appendChild(btn);
-            });
-        }
-
-        // Akordeon Menü
-        function togglePanel(id) {
-            const panel = document.getElementById(id);
-            document.querySelectorAll('.panel').forEach(p => { if(p.id !== id) p.style.display = 'none'; });
-            panel.style.display = (panel.style.display === "block") ? "none" : "block";
-        }
-
-        function toggleBrand(brand) {
-            if(brand === 'hyundai') {
-                document.getElementById('panel-hyundai').style.display = 'block';
-                document.getElementById('panel-kia').style.display = 'none';
-            } else {
-                document.getElementById('panel-kia').style.display = 'block';
-                document.getElementById('panel-hyundai').style.display = 'none';
-            }
-        }
-
-        // SEO ve URL Güncelleme
-        function updateMetaTags(title, desc, url) {
-            document.title = title + " | Cihat Hyundai";
-            document.querySelector('meta[name="description"]').setAttribute("content", desc);
-            if(url) window.history.pushState({path: url}, '', url);
-        }
-
-        function updateSchema(product) {
-            const schemaScript = document.getElementById('product-schema');
-            if(product) {
-                const imgUrl = product.images.length > 0 ? "https://cihathyundai.com/" + product.images[0] : "";
-                const productSchema = {
-                    "@context": "https://schema.org/",
-                    "@type": "Product",
-                    "name": product.title,
-                    "image": imgUrl,
-                    "description": product.desc,
-                    "brand": { "@type": "Brand", "name": "Hyundai/Kia" },
-                    "offers": {
-                        "@type": "Offer",
-                        "price": "0",
-                        "priceCurrency": "TRY",
-                        "availability": "https://schema.org/InStock"
-                    }
-                };
-                schemaScript.text = JSON.stringify(productSchema);
-            }
-        }
-
-        // --- ÜRÜN DETAYI VE GALERİ ---
-        function openProduct(id) {
-            const p = products.find(x => x.id == id);
+// --- 2. ÜRÜNÜ İSME (SLUG) GÖRE BULMA VE AÇMA ---
+        function openProduct(slug) {
+            // Listede bu isme (slug) sahip ürünü bul
+            const p = products.find(x => x.slug === slug);
             if(!p) return;
 
+            // Görünürlüğü ayarla
             document.getElementById('list-view').style.display = 'none';
-            document.getElementById('main-sidebar').style.display = 'none'; // Mobilde yer açmak için
+            document.getElementById('main-sidebar').style.display = 'none';
             document.getElementById('product-detail-view').style.display = 'block';
             window.scrollTo(0, 0);
 
-            // Verileri Doldur
-            document.getElementById('d-id').innerText = p.id;
-            document.getElementById('d-cat').innerText = p.category + " Yedek Parça";
+            // Verileri doldur
             document.getElementById('d-title').innerText = p.title;
             document.getElementById('d-desc').innerText = p.desc;
+            document.getElementById('d-main-img').src = p.images[0];
             
-            // --- Galeri Mantığı ---
-            const mainImg = document.getElementById('d-main-img');
-            const thumbContainer = document.getElementById('d-thumbnails');
-            
-            // Kapak Resmi
-            const firstImage = (p.images && p.images.length > 0) ? p.images[0] : 'https://via.placeholder.com/400';
-            mainImg.src = firstImage;
-
-            // Küçük Resimler
-            thumbContainer.innerHTML = '';
-            if(p.images && p.images.length > 0) {
-                p.images.forEach((src, index) => {
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.className = (index === 0) ? 'thumb active' : 'thumb';
-                    img.onclick = function() {
-                        mainImg.src = this.src;
-                        document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-                        this.classList.add('active');
-                    };
-                    thumbContainer.appendChild(img);
-                });
-            }
-
-            // WhatsApp ve SEO
-            const waMsg = `Merhaba, "${p.title}" (ID: ${p.id}) parça için fiyat alabilir miyim?`;
+            // WhatsApp Linki
+            const waMsg = `Merhaba, "${p.title}" ürünü için fiyat alabilir miyim?`;
             document.getElementById('d-whatsapp').href = `https://wa.me/905537383806?text=${encodeURIComponent(waMsg)}`;
-            
-            const slug = p.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
-            updateMetaTags(p.title, p.desc, `?urun=${p.id}-${slug}`);
-            updateSchema(p);
+
+            // SEO: Sekme başlığını ve URL'yi değiştir
+            document.title = p.title + " | Cihat Hyundai";
+            window.history.pushState({path: `?urun=${p.slug}`}, '', `?urun=${p.slug}`);
         }
 
-        function closeProduct() {
-            document.getElementById('product-detail-view').style.display = 'none';
-            document.getElementById('list-view').style.display = 'block';
-            document.getElementById('main-sidebar').style.display = 'block';
-            
-            window.history.pushState({path: '/'}, '', window.location.pathname);
-            document.title = "Cihat Hyundai & Kia Yedek Parça | Ankara";
-            updateSchema(null);
-        }
-
-        // --- LİSTELEME ---
+        // --- 3. ÜRÜNLERİ LİSTELEME (LİNK KISMI DEĞİŞTİ) ---
         function displayProducts(items) {
+            const grid = document.getElementById('product-grid');
             grid.innerHTML = "";
-            if(items.length === 0) {
-                grid.innerHTML = "<p style='grid-column: 1/-1; text-align:center; padding:20px; color:#777;'>Bu kriterde ürün bulunamadı.</p>";
-                return;
-            }
-
             items.forEach(p => {
-                const cover = (p.images && p.images.length > 0) ? p.images[0] : 'https://via.placeholder.com/300';
-                const count = p.images ? p.images.length : 0;
-                
                 const html = `
-                    <div class="card" onclick="openProduct(${p.id})">
+                    <div class="card" onclick="openProduct('${p.slug}')">
                         <div class="card-img">
-                            <img src="${cover}" alt="${p.title}">
-                            ${count > 1 ? `<div class="card-badge"><i class="fa fa-images"></i> ${count}</div>` : ''}
+                            <img src="${p.images[0]}" alt="${p.title}">
                         </div>
-                        <div class="card-body">
-                            <div class="c-cat">${p.category}</div>
-                            <div class="c-title">${p.title}</div>
-                            <div class="btn-whatsapp" style="padding:5px; font-size:0.9rem; background:#eee; color:#333;">İncele</div>
+                        <div class="card-body" style="padding:10px;">
+                            <div style="font-size:0.8rem; color:red;">${p.category}</div>
+                            <div style="font-weight:bold; height:40px; overflow:hidden;">${p.title}</div>
+                            <div class="btn-whatsapp" style="margin-top:10px; padding:5px; font-size:0.8rem;">İncele</div>
                         </div>
                     </div>
                 `;
@@ -13749,51 +13558,35 @@
             });
         }
 
-        // --- DÜZELTİLEN FONKSİYON BURADA ---
-        function filterByModel(model) {
-            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
-            
-            titleArea.innerText = (model === 'motor') ? "Sıfır Sandık Motorlar" : model + " Parçaları";
-            
-            // BURASI DEĞİŞTİ: Artık tam eşleşme (===) kullanılıyor.
-            // Accent, Accent Era'yı getirmez.
-            const filtered = products.filter(p => 
-                p.category === model || 
-                (model === 'motor' && p.category === 'motor')
-            );
-            
-            displayProducts(filtered);
-            if(window.innerWidth < 768) document.querySelector('.products-section').scrollIntoView({behavior:'smooth'});
+        function closeProduct() {
+            document.getElementById('product-detail-view').style.display = 'none';
+            document.getElementById('list-view').style.display = 'block';
+            document.getElementById('main-sidebar').style.display = 'block';
+            window.history.pushState({path: 'index.html'}, '', 'index.html');
+            document.title = "Cihat Hyundai & Kia Yedek Parça | Ankara";
         }
+
+        function showAll() {
+            displayProducts(products);
+        }
+
+        // --- 4. SAYFA YÜKLENDİĞİNDE URL'DE ÜRÜN VAR MI KONTROL ET ---
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urunSlug = urlParams.get('urun'); 
+            
+            if (urunSlug) {
+                openProduct(urunSlug); // Eğer linkte isim varsa o ürünü aç
+            } else {
+                displayProducts(products); // Yoksa vitrini göster
+            }
+        };
 
         function searchProduct() {
-            if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             const q = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = products.filter(p => 
-                p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
-            );
-            titleArea.innerText = "Arama Sonuçları";
+            const filtered = products.filter(p => p.title.toLowerCase().includes(q));
             displayProducts(filtered);
         }
-
-        // --- BAŞLANGIÇ ---
-        window.onload = function() {
-            populateSidebar();
-            
-            // BAŞLANGIÇTA SADECE VİTRİN (İLK 6) GELSİN
-            initVitrin(); 
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const productParam = urlParams.get('urun'); 
-            if (productParam) {
-                const id = productParam.split('-')[0];
-                openProduct(id);
-            }
-
-            window.onpopstate = function() {
-                if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
-            };
-        };
     </script>
 </body>
 </html>
