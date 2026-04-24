@@ -16307,6 +16307,38 @@
                 if(document.getElementById('product-detail-view').style.display === 'block') closeProduct();
             };
         };
+        // --- GOOGLE SEO VE LİNK GÜNCELLEME MOTORU ---
+        // Ürün açıldığında başlığı ve URL'yi değiştirir
+        const orijinalOpenProduct = window.openProduct;
+        window.openProduct = function(id) {
+            orijinalOpenProduct(id); // Sizin orijinal tasarımınızı bozulmadan çalıştırır
+            
+            const urun = products.find(p => p.id == id);
+            if(urun) {
+                // Sayfa başlığını ürüne göre değiştir
+                document.title = urun.title + " | Cihat Hyundai Yedek Parça";
+                
+                // Meta açıklamasını (Google'da görünen yazı) ürüne göre değiştir
+                let metaDesc = document.querySelector('meta[name="description"]');
+                if(metaDesc && urun.desc) {
+                    let kisaAciklama = urun.desc.substring(0, 150).replace(/(<([^>]+)>)/gi, "") + "...";
+                    metaDesc.setAttribute("content", kisaAciklama);
+                }
+
+                // Linki Google'ın okuyabileceği formata çevir
+                let temizBaslik = urun.title.toLowerCase().replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ş/g,'s').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ç/g,'c').replace(/ /g, '-').replace(/[^\w-]+/g, '');
+                let seoUrl = '?urun=' + urun.id + '-' + temizBaslik;
+                window.history.pushState({path: seoUrl}, '', seoUrl);
+            }
+        };
+
+        // Ürün kapatıldığında URL'yi ana sayfaya döndür
+        const orijinalCloseProduct = window.closeProduct;
+        window.closeProduct = function() {
+            orijinalCloseProduct();
+            document.title = "Cihat Hyundai & Kia Yedek Parça | Ankara";
+            window.history.pushState({path: window.location.pathname}, '', window.location.pathname);
+        };
     </script>
 </body>
 </html>
